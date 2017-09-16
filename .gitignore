@@ -1,1 +1,6 @@
 .*/
+build/
+out/
+run/
+*.bat
+*.log
