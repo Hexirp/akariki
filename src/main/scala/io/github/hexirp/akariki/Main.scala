@@ -4,7 +4,7 @@ import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.{EventHandler => Eventh}
 import net.minecraftforge.fml.common.event.{FMLInitializationEvent => Inite}
 
-@Mod(modid = "akariki")
+@Mod(modid = "akariki", modLanguage = "scala")
 object Main {
   @Eventh
   def init(event : Inite) : Unit = ()
