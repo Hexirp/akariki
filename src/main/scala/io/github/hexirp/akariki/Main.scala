@@ -1,11 +1,10 @@
 package io.github.hexirp.akariki
 
 import net.minecraftforge.fml.common.Mod
-import net.minecraftforge.fml.common.Mod.{EventHandler => Eventh}
-import net.minecraftforge.fml.common.event.{FMLInitializationEvent => Inite}
+import net.minecraftforge.fml.common.event.FMLInitializationEvent
 
 @Mod(modid = "akariki", modLanguage = "scala")
 object Main {
-  @Eventh
-  def init(event : Inite) : Unit = ()
+  @Mod.EventHandler
+  def init(e : FMLInitializationEvent) : Unit = ()
 }
