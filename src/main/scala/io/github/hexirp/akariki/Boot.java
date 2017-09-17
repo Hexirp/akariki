@@ -8,27 +8,32 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 @Mod(modid = "akariki", dependencies = "after:forge@[14.22.1.2478,)")
 @Mod.EventBusSubscriber
 public class Boot {
+    public Logger log = LogManager.getFormatterLogger("akariki");
+
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
-        System.out.print("preInit");
+        log.info("preInit");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
-        System.out.print("init");
+        log.info("init");
         Main.init(e);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent e) {
-        System.out.print("postInit");
+        log.info("postInit");
     }
 
     @SubscribeEvent
     public void regRecipe(RegistryEvent.Register<IRecipe> e) {
-        System.out.print("regRecipe");
+        log.info("regRecipe");
     }
 }
