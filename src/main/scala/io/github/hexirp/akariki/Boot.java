@@ -1,5 +1,6 @@
 package io.github.hexirp.akariki;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
@@ -7,6 +8,8 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 public class Boot {
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
-        Main$.MODULE$.init(e);
+        MinecraftForge.EVENT_BUS.register(new Recipe());
+
+        Main.init(e);
     }
 }
