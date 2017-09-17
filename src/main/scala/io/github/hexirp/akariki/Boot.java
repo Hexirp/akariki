@@ -15,15 +15,13 @@ import net.minecraftforge.fml.relauncher.Side;
 
 @Mod(modid = "akariki", dependencies = "after:forge@[14.22.1.2478,)")
 public class Boot {
-    public static Item sample;
+    public static final Item sample = new Item()
+            .setRegistryName("akariki:sample")
+            .setCreativeTab(CreativeTabs.MISC)
+            .setUnlocalizedName("sample");
 
     @SubscribeEvent
     public void regItem(RegistryEvent.Register<Item> e) {
-        sample = new Item()
-                .setRegistryName("akariki:sample")
-                .setCreativeTab(CreativeTabs.MISC)
-                .setUnlocalizedName("sample");
-
         e.getRegistry().register(sample);
     }
 
