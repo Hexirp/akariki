@@ -2,6 +2,7 @@ package io.github.hexirp.akariki;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
@@ -11,6 +12,10 @@ public class Subscriber {
 
     public Subscriber(Logger log) {
         this.log = log;
+    }
+
+    public void join() {
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @SubscribeEvent
