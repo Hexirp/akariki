@@ -17,18 +17,16 @@ public class Boot {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
         MinecraftForge.EVENT_BUS.register(new Subscriber(log));
-
-        log.info("preInit");
+        proxy.preInit(e);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
-        log.info("init");
         proxy.init(e);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent e) {
-        log.info("postInit");
+        proxy.postInit(e);
     }
 }
