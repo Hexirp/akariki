@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = "akariki", version = "0.0.0", dependencies = "after:forge@[14.22.1.2478,)")
 public class Boot {
     private final Logger log = LogManager.getFormatterLogger("akariki");
-    private final Init proxy = new Init(log);
+    private final Initializer proxy = new Initializer(log);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
