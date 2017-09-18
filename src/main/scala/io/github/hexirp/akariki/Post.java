@@ -8,10 +8,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
 public class Post {
-    private final Logger log;
+    private final Subscriber subsc;
 
     public Post(Logger log) {
-        this.log = log;
+        this.subsc = new Subscriber(log);
     }
 
     public void join() {
@@ -20,16 +20,16 @@ public class Post {
 
     @SubscribeEvent
     public void regRecipe(RegistryEvent.Register<IRecipe> e) {
-        log.info("regRecipe");
+        subsc.regRecipe(e);
     }
 
     @SubscribeEvent
     public void regItem(RegistryEvent.Register<Item> e) {
-        log.info("regItem");
+        subsc.regItem(e);
     }
 
     @SubscribeEvent
     public void regBlock(RegistryEvent.Register<net.minecraft.block.Block> e) {
-        log.info("regBlock");
+        subsc.regBlock(e);
     }
 }
