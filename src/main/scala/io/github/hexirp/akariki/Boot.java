@@ -23,7 +23,7 @@ public class Boot {
     @Mod.EventHandler
     public void init(FMLInitializationEvent e) {
         log.info("init");
-        Main.init(e);
+        Init.init(e);
     }
 
     @Mod.EventHandler

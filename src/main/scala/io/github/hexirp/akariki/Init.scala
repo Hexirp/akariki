@@ -2,6 +2,6 @@ package io.github.hexirp.akariki
 
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 
-object Main {
+object Init {
   def init(e : FMLInitializationEvent) : Unit = ()
 }
