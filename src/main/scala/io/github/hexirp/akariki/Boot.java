@@ -35,16 +35,16 @@ public class Boot {
 
     @SubscribeEvent
     public void regRecipe(RegistryEvent.Register<IRecipe> e) {
-        log.info("regRecipe");
+        throw new NullPointerException("regRecipe");
     }
 
     @SubscribeEvent
     public void regItem(RegistryEvent.Register<Item> e) {
-        log.info("regItem");
+        throw new NullPointerException("regItem");
     }
 
     @SubscribeEvent
     public void regBlock(RegistryEvent.Register<net.minecraft.block.Block> e) {
-        log.info("regBlock");
+        throw new NullPointerException("regBlock");
     }
 }
