@@ -7,10 +7,10 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
-public class Subscriber {
+public class Post {
     private final Logger log;
 
-    public Subscriber(Logger log) {
+    public Post(Logger log) {
         this.log = log;
     }
 

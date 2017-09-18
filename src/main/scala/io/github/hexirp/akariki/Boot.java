@@ -15,7 +15,7 @@ public class Boot {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent e) {
-        new Subscriber(log).join();
+        new Post(log).join();
         proxy.preInit(e);
     }
 
