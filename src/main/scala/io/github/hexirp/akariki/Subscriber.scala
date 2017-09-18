@@ -14,13 +14,13 @@ class Subscriber(log : Logger) {
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
-  def regRecipe(e : RegistryEvent.Register[IRecipe]) = log.info("regRecipe")
+  def regRecipe(e : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipe")
 
-  def regItem(e : RegistryEvent.Register[Item]) = {
+  def regItem(e : RegistryEvent.Register[Item]) : Unit = {
     log.info("regItem")
 
     e.getRegistry.register(sample)
   }
 
-  def regBlock(e : RegistryEvent.Register[Block]) = log.info("regBlock")
+  def regBlock(e : RegistryEvent.Register[Block]) : Unit = log.info("regBlock")
 }
