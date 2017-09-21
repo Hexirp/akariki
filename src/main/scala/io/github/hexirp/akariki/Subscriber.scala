@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger
 
 class Subscriber(log : Logger) {
   val sample : Item = new Item()
-    .setRegistryName(new ResourceLocation("akariki", "sample"))
+    .setRegistryName(new ResourceLocation(Metadata.modid, "sample"))
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
@@ -18,7 +18,6 @@ class Subscriber(log : Logger) {
 
   def regItem(e : RegistryEvent.Register[Item]) : Unit = {
     log.info("regItem")
-
     e.getRegistry.register(sample)
   }
 

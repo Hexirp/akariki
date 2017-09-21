@@ -8,9 +8,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = "akariki", version = "0.0.0", dependencies = "after:forge@[14.22.1.2478,)")
+@Mod(modid = Metadata.modid, version = Metadata.version, dependencies = Metadata.dependencies)
 public class Boot {
-    private final Logger log = LogManager.getFormatterLogger("akariki");
+    private final Logger log = LogManager.getFormatterLogger(Metadata.modid);
     private final Initializer proxy = new Initializer(log);
 
     @Mod.EventHandler
