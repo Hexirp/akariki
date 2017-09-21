@@ -1,5 +1,6 @@
 package io.github.hexirp.akariki;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,17 +20,17 @@ public class Post {
     }
 
     @SubscribeEvent
-    public void regRecipe(RegistryEvent.Register<IRecipe> e) {
-        subsc.regRecipe(e);
+    public void regRecipe(RegistryEvent.Register<IRecipe> event) {
+        subsc.regRecipe(event);
     }
 
     @SubscribeEvent
-    public void regItem(RegistryEvent.Register<Item> e) {
-        subsc.regItem(e);
+    public void regItem(RegistryEvent.Register<Item> event) {
+        subsc.regItem(event);
     }
 
     @SubscribeEvent
-    public void regBlock(RegistryEvent.Register<net.minecraft.block.Block> e) {
-        subsc.regBlock(e);
+    public void regBlock(RegistryEvent.Register<Block> event) {
+        subsc.regBlock(event);
     }
 }

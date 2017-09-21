@@ -14,18 +14,18 @@ public class Boot {
     private final Initializer proxy = new Initializer(log);
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent e) {
+    public void preInit(FMLPreInitializationEvent event) {
         new Post(log).join();
-        proxy.preInit(e);
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent e) {
-        proxy.init(e);
+    public void init(FMLInitializationEvent event) {
+        proxy.init(event);
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent e) {
-        proxy.postInit(e);
+    public void postInit(FMLPostInitializationEvent event) {
+        proxy.postInit(event);
     }
 }
