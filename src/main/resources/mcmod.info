@@ -2,7 +2,7 @@
   {
     "modid": "akariki",
     "name": "Akariki",
-    "version": "1.12.1-0.0.0",
+    "version": "mc1.12.1-0.0.0-alpha",
     "description": "Fill the world with circuits.",
     "mcversion": "1.12.1",
     "url": "https://github.com/Hexirp/akariki",
