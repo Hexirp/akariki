@@ -1,6 +1,6 @@
 {
   "type": "forge:ore_shaped",
-  "group": "akariki:bedrock_to_diamond",
+  "group": "akariki:sample_to_diamond",
   "pattern": [
     "###",
     "###",
@@ -8,7 +8,7 @@
   ],
   "key": {
     "#": {
-      "item": "minecraft:bedrock",
+      "item": "akariki:sample",
       "data": 0
     }
   },
