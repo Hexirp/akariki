@@ -12,7 +12,15 @@ class ItemList {
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
-  def regItem(reg : Item => Unit) : Unit = reg(sample)
+  val silver_ingot : Item = new Item()
+    .setRegistryName(new ResourceLocation(Metadata.modid, "silver_ingot"))
+    .setCreativeTab(CreativeTabs.MATERIALS)
+    .setUnlocalizedName("silver_ingot")
+
+  def regItem(func : Item => Unit) : Unit = {
+    func(sample)
+    func(silver_ingot)
+  }
 
   def regResource() : Unit = {
     ModelLoader.setCustomModelResourceLocation(sample, 0, new ModelResourceLocation(sample.getRegistryName, "inventory"))
