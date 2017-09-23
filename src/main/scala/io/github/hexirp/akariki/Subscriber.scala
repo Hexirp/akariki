@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.event.RegistryEvent
 import org.apache.logging.log4j.Logger
 
-class Subscriber(log : Logger) {
+class Subscriber(log : Logger, items : ItemList) {
   val sample : Item = new Item()
     .setRegistryName(new ResourceLocation(Metadata.modid, "sample"))
     .setCreativeTab(CreativeTabs.MISC)
