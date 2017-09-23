@@ -5,6 +5,7 @@ import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.Item
 import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
+import net.minecraftforge.event.RegistryEvent
 
 class ItemList {
   val sample : Item = new Item()
@@ -17,9 +18,9 @@ class ItemList {
     .setCreativeTab(CreativeTabs.MATERIALS)
     .setUnlocalizedName("silver_ingot")
 
-  def regItem(func : Item => Unit) : Unit = {
-    func(sample)
-    func(silver_ingot)
+  def regItem(event : RegistryEvent.Register[Item]) : Unit = {
+    event.getRegistry.register(sample)
+    event.getRegistry.register(silver_ingot)
   }
 
   def regResource() : Unit = {

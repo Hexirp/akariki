@@ -11,7 +11,7 @@ class Subscriber(log : Logger, items : ItemList) {
 
   def regItem(event : RegistryEvent.Register[Item]) : Unit = {
     log.info("regItem")
-    items.regItem(event.getRegistry.register)
+    items.regItem(event)
   }
 
   def regBlock(event : RegistryEvent.Register[Block]) : Unit = log.info("regBlock")
