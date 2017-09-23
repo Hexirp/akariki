@@ -6,11 +6,7 @@ import org.apache.logging.log4j.Logger
 class Initializer(log : Logger) {
   def preInit(event : FMLPreInitializationEvent, items : ItemList) : Unit = {
     log.info("preInit")
-    if (event.getSide.isClient) {
-      import net.minecraft.client.renderer.block.model.ModelResourceLocation
-      import net.minecraftforge.client.model.ModelLoader
-      ModelLoader.setCustomModelResourceLocation(items.sample, 0, new ModelResourceLocation(items.sample.getRegistryName, "inventory"))
-    }
+    if (event.getSide.isClient) items.regResource()
   }
 
   def init(event : FMLInitializationEvent) : Unit = log.info("init")
