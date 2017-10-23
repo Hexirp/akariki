@@ -7,7 +7,7 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
-class ItemList {
+class Items {
   val sample : Item = new Item()
     .setRegistryName(new ResourceLocation(Metadata.modid, "sample"))
     .setCreativeTab(CreativeTabs.MISC)

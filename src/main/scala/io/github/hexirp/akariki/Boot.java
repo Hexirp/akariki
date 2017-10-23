@@ -15,7 +15,7 @@ public class Boot {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        ItemList items = new ItemList();
+        Items items = new Items();
         new Post(log, items).join();
         proxy.preInit(event, items);
     }

@@ -6,7 +6,7 @@ import net.minecraft.item.crafting.IRecipe
 import net.minecraftforge.event.RegistryEvent
 import org.apache.logging.log4j.Logger
 
-class Subscriber(log : Logger, items : ItemList) {
+class Subscriber(log : Logger, items : Items) {
   def regRecipe(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipe")
 
   def regItem(event : RegistryEvent.Register[Item]) : Unit = {
