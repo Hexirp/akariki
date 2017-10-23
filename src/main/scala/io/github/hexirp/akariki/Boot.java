@@ -11,23 +11,23 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Metadata.modid, version = Metadata.version, dependencies = Metadata.dependencies)
 public class Boot {
     private final Logger log = LogManager.getFormatterLogger(Metadata.modid);
-    private final Initializer proxy = new Initializer(log);
+    private final Initializer initer = new Initializer(log);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         Blocks blocks = new Blocks();
         Items items = new Items(blocks);
         new Post(log, items, blocks).join();
-        proxy.preInit(event, items);
+        initer.preInit(event, items);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        proxy.init(event);
+        initer.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-        proxy.postInit(event);
+        initer.postInit(event);
     }
 }
