@@ -5,5 +5,5 @@ public class Metadata {
 
     public static final String version = "0.0.0-alpha-1";
 
-    public static final String dependencies = "after:forge@[14.22.1.2478,)";
+    public static final String dependencies = "required-after:forge@[14.23.0.2491,)";
 }
