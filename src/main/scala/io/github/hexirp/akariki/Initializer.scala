@@ -11,5 +11,5 @@ class Initializer(log : Logger) {
 
   def init(event : FMLInitializationEvent) : Unit = log.info("init")
 
-  def postInit(event :FMLPostInitializationEvent) : Unit = log.info("postInit")
+  def postInit(event : FMLPostInitializationEvent) : Unit = log.info("postInit")
 }
