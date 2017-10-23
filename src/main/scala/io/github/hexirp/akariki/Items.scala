@@ -19,6 +19,7 @@ class Items(blocks : Blocks) {
     .setUnlocalizedName("silver_ingot")
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
+    .setRegistryName(new ResourceLocation(Metadata.modid, "silver_ore"))
 
   def regItem(event : RegistryEvent.Register[Item]) : Unit = {
     event.getRegistry.register(sample)
