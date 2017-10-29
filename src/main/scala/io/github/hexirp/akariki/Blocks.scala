@@ -13,7 +13,7 @@ class Blocks {
     .setUnlocalizedName("silver_ore")
 
   val silver_block : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResoruceLocation(Metadata.modid, "silver_block"))
+    .setRegistryName(new ResourceLocation(Metadata.modid, "silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
