@@ -3,6 +3,7 @@ package io.github.hexirp.akariki;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -32,5 +33,10 @@ public class Post {
     @SubscribeEvent
     public void regBlock(RegistryEvent.Register<Block> event) {
         subsc.regBlock(event);
+    }
+
+    @SubscribeEvent
+    public void regModel(ModelRegistryEvent event) {
+        subsc.regModel(event);
     }
 }

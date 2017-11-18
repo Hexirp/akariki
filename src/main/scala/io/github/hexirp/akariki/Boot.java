@@ -12,19 +12,18 @@ import org.apache.logging.log4j.Logger;
 public class Boot {
     private final Logger log = LogManager.getFormatterLogger(Metadata.modid);
     private final Initializer initer = new Initializer(log);
-    private Items items = null;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         Blocks blocks = new Blocks();
-        items = new Items(blocks);
+        Items items = new Items(blocks);
         new Post(log, items, blocks).join();
         initer.preInit(event);
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
-        initer.init(event, items);
+        initer.init(event);
     }
 
     @Mod.EventHandler
