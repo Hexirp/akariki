@@ -4,12 +4,12 @@ import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostIniti
 import org.apache.logging.log4j.Logger
 
 class Initializer(log : Logger) {
-  def preInit(event : FMLPreInitializationEvent, items : Items) : Unit = {
-    log.info("preInit")
+  def preInit(event : FMLPreInitializationEvent) : Unit = log.info("preInit")
+
+  def init(event : FMLInitializationEvent, items : Items) : Unit = {
+    log.info("init")
     if (event.getSide.isClient) items.regResource()
   }
-
-  def init(event : FMLInitializationEvent) : Unit = log.info("init")
 
   def postInit(event : FMLPostInitializationEvent) : Unit = log.info("postInit")
 }
