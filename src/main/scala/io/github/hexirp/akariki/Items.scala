@@ -35,6 +35,6 @@ class Items(blocks : Blocks) {
     ModelLoader.setCustomModelResourceLocation(sample, 0, new ModelResourceLocation(sample.getRegistryName, "inventory"))
     ModelLoader.setCustomModelResourceLocation(silver_ingot, 0, new ModelResourceLocation(silver_ingot.getRegistryName, "inventory"))
     ModelLoader.setCustomModelResourceLocation(silver_ore, 0, new ModelResourceLocation(silver_ore.getRegistryName, "inventory"))
-    ModelLoader.setCustomModelResourceLocation(silver_block, 0, new ModelResourceLocation(silver_ore.getRegistryName, "inventory"))
+    ModelLoader.setCustomModelResourceLocation(silver_block, 0, new ModelResourceLocation(silver_block.getRegistryName, "inventory"))
   }
 }
