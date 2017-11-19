@@ -32,9 +32,11 @@ class Items(blocks : Blocks) {
   }
 
   def regResource() : Unit = {
-    ModelLoader.setCustomModelResourceLocation(sample, 0, new ModelResourceLocation(sample.getRegistryName, "inventory"))
-    ModelLoader.setCustomModelResourceLocation(silver_ingot, 0, new ModelResourceLocation(silver_ingot.getRegistryName, "inventory"))
-    ModelLoader.setCustomModelResourceLocation(silver_ore, 0, new ModelResourceLocation(silver_ore.getRegistryName, "inventory"))
-    ModelLoader.setCustomModelResourceLocation(silver_block, 0, new ModelResourceLocation(silver_block.getRegistryName, "inventory"))
+    def regModel(item : Item) : Unit = ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName, "inventory"))
+
+    regModel(sample)
+    regModel(silver_ingot)
+    regModel(silver_ore)
+    regModel(silver_block)
   }
 }
