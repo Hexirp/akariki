@@ -112,10 +112,10 @@ gradle-app.setting
 # Users
 
 ## The "," folder contains hidden batch files.
-,
+/,/
 
 ## The "run" folder is used when running Minecraft for testing.
-run
+/run/
 
 ## I do not share idea settings.
-.idea
+/.idea/
