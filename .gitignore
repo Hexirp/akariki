@@ -113,3 +113,6 @@ gradle-app.setting
 
 ## The "," folder contains hidden batch files.
 ,
+
+## The "run" folder is used when running Minecraft for testing.
+run
