@@ -7,10 +7,10 @@ buildscript {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
     }
 }
-apply plugin: 'scala'
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
+apply plugin: 'scala'
 
 version = "0.0.0-alpha-1"
 group = "io.github.hexirp" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
