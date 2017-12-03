@@ -116,3 +116,6 @@ gradle-app.setting
 
 ## The "run" folder is used when running Minecraft for testing.
 run
+
+## I do not share idea settings.
+.idea
