@@ -118,4 +118,7 @@ gradle-app.setting
 /run/
 
 ## I do not share idea settings.
-/.idea/
+/.idea/*
+
+### But, I track my coding styles.
+!/.idea/codeStyles/
