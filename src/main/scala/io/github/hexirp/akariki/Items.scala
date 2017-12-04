@@ -32,8 +32,11 @@ class Items(blocks : Blocks) {
   }
 
   def regResource() : Unit = {
-    def setModel(item : Item, model : ModelResourceLocation) = ModelLoader.setCustomModelResourceLocation(item, 0, model)
-    def regModel(item : Item) : Unit = setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
+    def setModel(item : Item, model : ModelResourceLocation) : Unit =
+      ModelLoader.setCustomModelResourceLocation(item, 0, model)
+
+    def regModel(item : Item) : Unit =
+      setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
     regModel(sample)
     regModel(silver_ingot)
