@@ -25,10 +25,12 @@ class Items(blocks : Blocks) {
     .setRegistryName(new ResourceLocation(Metadata.modid, "silver_block"))
 
   def regItem(event : RegistryEvent.Register[Item]) : Unit = {
-    event.getRegistry.register(sample)
-    event.getRegistry.register(silver_ingot)
-    event.getRegistry.register(silver_ore)
-    event.getRegistry.register(silver_block)
+    def regItem(item : Item) : Unit = event.getRegistry.register(item)
+
+    regItem(sample)
+    regItem(silver_ingot)
+    regItem(silver_ore)
+    regItem(silver_block)
   }
 
   def regResource() : Unit = {
