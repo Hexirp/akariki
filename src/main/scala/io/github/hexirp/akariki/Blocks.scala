@@ -18,7 +18,9 @@ class Blocks {
     .setUnlocalizedName("silver_block")
 
   def regBlock(event : RegistryEvent.Register[Block]) : Unit = {
-    event.getRegistry.register(silver_ore)
-    event.getRegistry.register(silver_block)
+    def regBlock(block : Block) : Unit = event.getRegistry.register(block)
+
+    regBlock(silver_ore)
+    regBlock(silver_block)
   }
 }
