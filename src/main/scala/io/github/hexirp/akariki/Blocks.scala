@@ -17,8 +17,10 @@ class Blocks {
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
-  def regBlock(event : RegistryEvent.Register[Block]) : Unit = {
-    event.getRegistry.register(silver_ore)
-    event.getRegistry.register(silver_block)
+  def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
+    def regBlock(block : Block) : Unit = event.getRegistry.register(block)
+
+    regBlock(silver_ore)
+    regBlock(silver_block)
   }
 }

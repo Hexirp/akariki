@@ -24,14 +24,16 @@ class Items(blocks : Blocks) {
   val silver_block : Item = new ItemBlock(blocks.silver_block)
     .setRegistryName(new ResourceLocation(Metadata.modid, "silver_block"))
 
-  def regItem(event : RegistryEvent.Register[Item]) : Unit = {
-    event.getRegistry.register(sample)
-    event.getRegistry.register(silver_ingot)
-    event.getRegistry.register(silver_ore)
-    event.getRegistry.register(silver_block)
+  def regItems(event : RegistryEvent.Register[Item]) : Unit = {
+    def regItem(item : Item) : Unit = event.getRegistry.register(item)
+
+    regItem(sample)
+    regItem(silver_ingot)
+    regItem(silver_ore)
+    regItem(silver_block)
   }
 
-  def regResource() : Unit = {
+  def regResources() : Unit = {
     def setModel(item : Item, model : ModelResourceLocation) : Unit =
       ModelLoader.setCustomModelResourceLocation(item, 0, model)
 

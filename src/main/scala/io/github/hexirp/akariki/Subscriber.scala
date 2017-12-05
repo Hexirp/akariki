@@ -12,16 +12,16 @@ class Subscriber(log : Logger, items : Items, blocks : Blocks) {
 
   def regItem(event : RegistryEvent.Register[Item]) : Unit = {
     log.info("regItem")
-    items.regItem(event)
+    items.regItems(event)
   }
 
   def regBlock(event : RegistryEvent.Register[Block]) : Unit = {
     log.info("regBlock")
-    blocks.regBlock(event)
+    blocks.regBlocks(event)
   }
 
   def regModel(event : ModelRegistryEvent) : Unit = {
     log.info("regModel")
-    items.regResource()
+    items.regResources()
   }
 }
