@@ -24,7 +24,7 @@ class Items(blocks : Blocks) {
   val silver_block : Item = new ItemBlock(blocks.silver_block)
     .setRegistryName(new ResourceLocation(Metadata.modid, "silver_block"))
 
-  def regItem(event : RegistryEvent.Register[Item]) : Unit = {
+  def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
     regItem(sample)
@@ -33,7 +33,7 @@ class Items(blocks : Blocks) {
     regItem(silver_block)
   }
 
-  def regResource() : Unit = {
+  def regResources() : Unit = {
     def setModel(item : Item, model : ModelResourceLocation) = ModelLoader.setCustomModelResourceLocation(item, 0, model)
     def regModel(item : Item) : Unit = setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
