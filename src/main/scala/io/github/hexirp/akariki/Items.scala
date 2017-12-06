@@ -25,6 +25,9 @@ class Items(blocks : Blocks) {
   val silver_block : Item = new ItemBlock(blocks.silver_block)
     .setRegistryName(new ResourceLocation(Metadata.modid, "silver_block"))
 
+  val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
+    .setRegistryName(new ResourceLocation(Metadata.modid, "prismarine_fence"))
+
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
@@ -32,6 +35,7 @@ class Items(blocks : Blocks) {
     regItem(silver_ingot)
     regItem(silver_ore)
     regItem(silver_block)
+    regItem(prismarine_fence)
   }
 
   def regResources() : Unit = {
@@ -45,5 +49,6 @@ class Items(blocks : Blocks) {
     regModel(silver_ingot)
     regModel(silver_ore)
     regModel(silver_block)
+    regModel(prismarine_fence)
   }
 }
