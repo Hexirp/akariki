@@ -12,10 +12,10 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
 public class Post {
-    private final Subscriber subsc;
+    private final Subscriber subs;
 
     public Post(Logger log, Items items, Blocks blocks) {
-        this.subsc = new Subscriber(log, items, blocks);
+        this.subs = new Subscriber(log, items, blocks);
     }
 
     public void join() {
@@ -24,21 +24,21 @@ public class Post {
 
     @SubscribeEvent
     public void regRecipes(RegistryEvent.Register<IRecipe> event) {
-        subsc.regRecipes(event);
+        subs.regRecipes(event);
     }
 
     @SubscribeEvent
     public void regItems(RegistryEvent.Register<Item> event) {
-        subsc.regItems(event);
+        subs.regItems(event);
     }
 
     @SubscribeEvent
     public void regBlocks(RegistryEvent.Register<Block> event) {
-        subsc.regBlocks(event);
+        subs.regBlocks(event);
     }
 
     @SubscribeEvent
     public void regModels(ModelRegistryEvent event) {
-        subsc.regModels(event);
+        subs.regModels(event);
     }
 }
