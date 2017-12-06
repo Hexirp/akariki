@@ -27,5 +27,6 @@ class Blocks {
 
     regBlock(silver_ore)
     regBlock(silver_block)
+    regBlock(prismarine_fence)
   }
 }
