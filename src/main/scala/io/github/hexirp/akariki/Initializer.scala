@@ -1,6 +1,7 @@
 package io.github.hexirp.akariki
 
 import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
+
 import org.apache.logging.log4j.Logger
 
 class Initializer(log : Logger) {

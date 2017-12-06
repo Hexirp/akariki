@@ -1,7 +1,40 @@
 <component name="ProjectCodeStyleConfiguration">
   <code_scheme name="Project" version="173">
     <option name="LINE_SEPARATOR" value="&#10;" />
+    <JavaCodeStyleSettings>
+      <option name="IMPORT_LAYOUT_TABLE">
+        <value>
+          <package name="" withSubpackages="true" static="false" />
+          <emptyLine />
+          <package name="net.minecraft" withSubpackages="true" static="false" />
+          <emptyLine />
+          <package name="net.minecraftforge" withSubpackages="true" static="false" />
+          <emptyLine />
+          <package name="org.apache" withSubpackages="true" static="false" />
+          <emptyLine />
+          <package name="javax" withSubpackages="true" static="false" />
+          <package name="java" withSubpackages="true" static="false" />
+          <emptyLine />
+          <package name="" withSubpackages="true" static="true" />
+        </value>
+      </option>
+    </JavaCodeStyleSettings>
     <ScalaCodeStyleSettings>
+      <option name="importLayout">
+        <array>
+          <option value="java" />
+          <option value="_______ blank line _______" />
+          <option value="net.minecraft" />
+          <option value="_______ blank line _______" />
+          <option value="net.minecraftforge" />
+          <option value="_______ blank line _______" />
+          <option value="org.apache" />
+          <option value="_______ blank line _______" />
+          <option value="all other imports" />
+          <option value="_______ blank line _______" />
+          <option value="scala" />
+        </array>
+      </option>
       <option name="SPACE_BEFORE_TYPE_COLON" value="true" />
     </ScalaCodeStyleSettings>
   </code_scheme>

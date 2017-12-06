@@ -4,6 +4,7 @@ import net.minecraft.block.Block
 import net.minecraft.block.material.Material
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.util.ResourceLocation
+
 import net.minecraftforge.event.RegistryEvent
 
 class Blocks {
