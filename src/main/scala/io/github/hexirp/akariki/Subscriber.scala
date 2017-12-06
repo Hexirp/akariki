@@ -10,20 +10,20 @@ import net.minecraftforge.event.RegistryEvent
 import org.apache.logging.log4j.Logger
 
 class Subscriber(log : Logger, items : Items, blocks : Blocks) {
-  def regRecipe(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipe")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
-  def regItem(event : RegistryEvent.Register[Item]) : Unit = {
-    log.info("regItem")
+  def regItems(event : RegistryEvent.Register[Item]) : Unit = {
+    log.info("regItems")
     items.regItems(event)
   }
 
-  def regBlock(event : RegistryEvent.Register[Block]) : Unit = {
-    log.info("regBlock")
+  def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
+    log.info("regBlocks")
     blocks.regBlocks(event)
   }
 
-  def regModel(event : ModelRegistryEvent) : Unit = {
-    log.info("regModel")
+  def regModels(event : ModelRegistryEvent) : Unit = {
+    log.info("regModels")
     items.regResources()
   }
 }

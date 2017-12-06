@@ -23,22 +23,22 @@ public class Post {
     }
 
     @SubscribeEvent
-    public void regRecipe(RegistryEvent.Register<IRecipe> event) {
-        subsc.regRecipe(event);
+    public void regRecipes(RegistryEvent.Register<IRecipe> event) {
+        subsc.regRecipes(event);
     }
 
     @SubscribeEvent
-    public void regItem(RegistryEvent.Register<Item> event) {
-        subsc.regItem(event);
+    public void regItems(RegistryEvent.Register<Item> event) {
+        subsc.regItems(event);
     }
 
     @SubscribeEvent
-    public void regBlock(RegistryEvent.Register<Block> event) {
-        subsc.regBlock(event);
+    public void regBlocks(RegistryEvent.Register<Block> event) {
+        subsc.regBlocks(event);
     }
 
     @SubscribeEvent
-    public void regModel(ModelRegistryEvent event) {
-        subsc.regModel(event);
+    public void regModels(ModelRegistryEvent event) {
+        subsc.regModels(event);
     }
 }
