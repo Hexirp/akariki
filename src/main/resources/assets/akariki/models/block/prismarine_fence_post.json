@@ -1,6 +1,6 @@
 {
   "parent": "block/fence_post",
   "textures": {
-    "texture": "blocks/prismarine_brick"
+    "texture": "blocks/prismarine_bricks"
   }
 }
