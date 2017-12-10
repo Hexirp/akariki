@@ -1,5 +1,8 @@
 package io.github.hexirp.akariki;
 
+/**
+ * {@link Metadata} is data of akariki.
+ */
 public class Metadata {
     public static final String MOD_ID = "akariki";
 

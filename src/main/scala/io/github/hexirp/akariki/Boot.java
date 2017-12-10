@@ -8,6 +8,9 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * {@link Boot} receives Forge's initialization events and works as a main class of akariki.
+ */
 @Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
 public class Boot {
     private final Logger log = LogManager.getFormatterLogger(Metadata.MOD_ID);

@@ -9,6 +9,12 @@ import net.minecraftforge.event.RegistryEvent
 
 import org.apache.logging.log4j.Logger
 
+/** [[Subscriber]] connects [[Post]] to Scala.
+  *
+  * @param log
+  * @param items
+  * @param blocks
+  */
 class Subscriber(log : Logger, items : Items, blocks : Blocks) {
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 

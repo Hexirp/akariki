@@ -8,6 +8,10 @@ import net.minecraftforge.fml.common.event.{
 
 import org.apache.logging.log4j.Logger
 
+/** [[Initializer]] connects [[Boot]] to Scala.
+  *
+  * @param log
+  */
 class Initializer(log : Logger) {
   def preInit(event : FMLPreInitializationEvent) : Unit = log.info("preInit")
 

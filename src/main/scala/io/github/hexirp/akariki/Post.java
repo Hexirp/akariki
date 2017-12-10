@@ -11,6 +11,9 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import org.apache.logging.log4j.Logger;
 
+/**
+ * {@link Post} receives Forge's events.
+ */
 public class Post {
     private final Subscriber subs;
 

@@ -7,6 +7,9 @@ import net.minecraft.util.ResourceLocation
 
 import net.minecraftforge.event.RegistryEvent
 
+/** [[Blocks]] manages blocks of akariki.
+  *
+  */
 class Blocks {
   val silver_ore : Block = new Block(Material.ROCK)
     .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ore"))

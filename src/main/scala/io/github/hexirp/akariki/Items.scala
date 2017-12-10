@@ -8,6 +8,10 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
+/** [[Items]] manages items of akariki.
+  *
+  * @param blocks
+  */
 class Items(blocks : Blocks) {
   val sample : Item = new Item()
     .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "sample"))
