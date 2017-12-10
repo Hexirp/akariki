@@ -12,17 +12,17 @@ import net.minecraftforge.event.RegistryEvent
   */
 class Blocks {
   val silver_ore : Block = new Block(Material.ROCK)
-    .setRegistryName(Metadata.makeResLoc("silver_ore"))
+    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
 
   val silver_block : Block = new Block(Material.ROCK)
-    .setRegistryName(Metadata.makeResLoc("silver_block"))
+    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
-    .setRegistryName(Metadata.makeResLoc("prismarine_fence"))
+    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
     .setUnlocalizedName("prismarine_fence")
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
