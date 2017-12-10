@@ -9,7 +9,7 @@ import net.minecraftforge.event.RegistryEvent
 
 import org.apache.logging.log4j.Logger
 
-/** [[Subscriber]] connects [[Post]] to Scala.
+/** [[Subscriber]] receives Forge's events.
   *
   * @param log
   * @param items

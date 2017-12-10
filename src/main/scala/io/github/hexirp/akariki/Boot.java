@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * {@link Boot} receives Forge's initialization events and works as a main class of akariki.
+ * {@link Boot} connects Forge's initialization events to {@link Initializer} and works as a main class of akariki.
  */
 @Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
 public class Boot {

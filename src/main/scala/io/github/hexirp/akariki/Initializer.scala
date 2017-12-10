@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.event.{
 
 import org.apache.logging.log4j.Logger
 
-/** [[Initializer]] connects [[Boot]] to Scala.
+/** [[Initializer]] receives Forge's initialization events.
   *
   * @param log
   */
