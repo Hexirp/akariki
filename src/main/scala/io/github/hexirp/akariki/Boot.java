@@ -9,18 +9,14 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * {@link Boot} receives Forge's initialization events and works as a main class of akariki.
+ * {@link Boot} connects Forge's initialization events to {@link Initializer} and works as a main class of akariki.
  */
 @Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
 public class Boot {
-    private final Logger log = LogManager.getFormatterLogger(Metadata.MOD_ID);
-    private final Initializer init = new Initializer(log);
+    private final Initializer init = new Initializer();
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        final Blocks blocks = new Blocks();
-        final Items items = new Items(blocks);
-        new Post(log, items, blocks).join();
         init.preInit(event);
     }
 
