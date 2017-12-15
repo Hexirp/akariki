@@ -8,15 +8,13 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
-import io.github.hexirp.akariki.Boot.MOD_ID
-
 /** [[Items]] manages items of akariki.
   *
   * @param blocks
   */
 class Items(blocks : Blocks) {
   val sample : Item = new Item()
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "sample"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "sample"))
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 

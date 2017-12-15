@@ -7,14 +7,12 @@ import net.minecraft.util.ResourceLocation
 
 import net.minecraftforge.event.RegistryEvent
 
-import io.github.hexirp.akariki.Boot.MOD_ID
-
 /** [[Blocks]] manages blocks of akariki.
   *
   */
 class Blocks {
   val silver_ore : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ore"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
 

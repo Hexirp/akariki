@@ -1,16 +1,15 @@
 package io.github.hexirp.akariki
 
-import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
+import net.minecraftforge.fml.common.event.{ //
+  FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
 
 import org.apache.logging.log4j.{LogManager, Logger}
-
-import io.github.hexirp.akariki.Boot.MOD_ID
 
 /** [[Initializer]] receives Forge's initialization events.
   *
   */
 class Initializer {
-  val log : Logger = LogManager.getFormatterLogger(Metadata.MOD_ID)
+  val log : Logger = LogManager.getFormatterLogger(Boot.MOD_ID)
 
   def preInit(event : FMLPreInitializationEvent) : Unit = {
     val blocks = new Blocks()
