@@ -1,12 +1,10 @@
 package io.github.hexirp.akariki
 
-import net.minecraftforge.fml.common.event.{
-  FMLInitializationEvent,
-  FMLPostInitializationEvent,
-  FMLPreInitializationEvent
-}
+import net.minecraftforge.fml.common.event.{FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
 
 import org.apache.logging.log4j.{LogManager, Logger}
+
+import io.github.hexirp.akariki.Boot.MOD_ID
 
 /** [[Initializer]] receives Forge's initialization events.
   *

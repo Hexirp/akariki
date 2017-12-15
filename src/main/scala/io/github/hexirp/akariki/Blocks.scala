@@ -7,6 +7,8 @@ import net.minecraft.util.ResourceLocation
 
 import net.minecraftforge.event.RegistryEvent
 
+import io.github.hexirp.akariki.Boot.MOD_ID
+
 /** [[Blocks]] manages blocks of akariki.
   *
   */
@@ -17,12 +19,12 @@ class Blocks {
     .setUnlocalizedName("silver_ore")
 
   val silver_block : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_block"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "prismarine_fence"))
     .setUnlocalizedName("prismarine_fence")
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {

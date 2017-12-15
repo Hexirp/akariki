@@ -8,6 +8,8 @@ import net.minecraft.util.ResourceLocation
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
+import io.github.hexirp.akariki.Boot.MOD_ID
+
 /** [[Items]] manages items of akariki.
   *
   * @param blocks
@@ -19,18 +21,18 @@ class Items(blocks : Blocks) {
     .setUnlocalizedName("sample")
 
   val silver_ingot : Item = new Item()
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ingot"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_ingot"))
     .setCreativeTab(CreativeTabs.MATERIALS)
     .setUnlocalizedName("silver_ingot")
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ore"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_ore"))
 
   val silver_block : Item = new ItemBlock(blocks.silver_block)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_block"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_block"))
 
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
+    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "prismarine_fence"))
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
