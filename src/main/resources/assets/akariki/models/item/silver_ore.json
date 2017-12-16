@@ -1,5 +1,5 @@
 {
-  "parent": "block/iron_ore",
+  "parent": "akariki:block/silver_ore",
   "display": {
     "thirdperson": {
       "rotation": [
