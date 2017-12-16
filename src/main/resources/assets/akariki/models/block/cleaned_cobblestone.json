@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "blocks/cobblestone"
+    "all": "akariki:blocks/cleaned_cobblestone"
   }
 }
