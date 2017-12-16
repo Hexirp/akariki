@@ -1,7 +1,7 @@
 {
   "variants": {
     "normal": {
-      "model": "cobblestone"
+      "model": "akariki:cleaned_cobblestone"
     }
   }
 }

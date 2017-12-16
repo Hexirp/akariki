@@ -1,5 +1,5 @@
 {
-  "parent": "block/cobblestone",
+  "parent": "akariki:block/cleaned_cobblestone",
   "display": {
     "thirdperson": {
       "rotation": [
