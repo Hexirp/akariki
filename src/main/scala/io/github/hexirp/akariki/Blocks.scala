@@ -10,19 +10,19 @@ import net.minecraftforge.event.RegistryEvent
 /** [[Blocks]] manages blocks of akariki.
   *
   */
-class Blocks {
+class Blocks(metadata : Metadata) {
   val silver_ore : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_ore"))
+    .setRegistryName(metadata.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
 
   val silver_block : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "silver_block"))
+    .setRegistryName(metadata.newResourceLocation("silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
-    .setRegistryName(new ResourceLocation(Boot.MOD_ID, "prismarine_fence"))
+    .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
     .setUnlocalizedName("prismarine_fence")
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {

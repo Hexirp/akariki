@@ -12,8 +12,8 @@ import net.minecraftforge.event.RegistryEvent
   * @param metadata
   */
 class Subscriber(metadata : Metadata) {
-  val blocks : Blocks = new Blocks()
-  val items : Items = new Items(blocks)
+  val blocks : Blocks = new Blocks(metadata)
+  val items : Items = new Items(metadata, blocks)
 
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = metadata.info("regRecipes")
 
