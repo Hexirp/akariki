@@ -14,14 +14,11 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
 public class Boot {
     private final Logger log = LogManager.getFormatterLogger(Metadata.MOD_ID);
-
     private final Initializer init = new Initializer(log);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        Blocks blocks = new Blocks();
-        Items items = new Items(blocks);
-        new Post(log, items, blocks).join();
+        new Post(log).join();
         init.preInit(event);
     }
 

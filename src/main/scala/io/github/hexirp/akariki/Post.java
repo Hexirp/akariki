@@ -17,8 +17,8 @@ import org.apache.logging.log4j.Logger;
 public class Post {
     private final Subscriber subs;
 
-    public Post(Logger log, Items items, Blocks blocks) {
-        this.subs = new Subscriber(log, items, blocks);
+    public Post(Logger log) {
+        this.subs = new Subscriber(log);
     }
 
     public void join() {
