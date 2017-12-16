@@ -12,13 +12,9 @@ public class Metadata {
     private final String id;
     private final Logger log;
 
-    public Metadata(String id, Logger log) {
+    public Metadata(String id) {
         this.id = id;
         this.log = LogManager.getFormatterLogger(id);
-    }
-
-    public String id() {
-        return id;
     }
 
     public ResourceLocation newResourceLocation(String name) {
