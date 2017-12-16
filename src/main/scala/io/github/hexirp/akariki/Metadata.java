@@ -2,7 +2,8 @@ package io.github.hexirp.akariki;
 
 import net.minecraft.util.ResourceLocation;
 
-import org.apache.logging.log4j.core.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * {@link Metadata} is data of akariki.
@@ -13,7 +14,7 @@ public class Metadata {
 
     public Metadata(String id, Logger log) {
         this.id = id;
-        this.log = log;
+        this.log = LogManager.getFormatterLogger(id);
     }
 
     public String id() {

@@ -11,25 +11,25 @@ import org.apache.logging.log4j.Logger
 
 /** [[Subscriber]] receives Forge's events.
   *
-  * @param log
+  * @param metadata
   * @param items
   * @param blocks
   */
-class Subscriber(log : Logger, items : Items, blocks : Blocks) {
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
+class Subscriber(metadata : Metadata, items : Items, blocks : Blocks) {
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = metadata.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
-    log.info("regItems")
+    metadata.info("regItems")
     items.regItems(event)
   }
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
-    log.info("regBlocks")
+    metadata.info("regBlocks")
     blocks.regBlocks(event)
   }
 
   def regModels(event : ModelRegistryEvent) : Unit = {
-    log.info("regModels")
+    metadata.info("regModels")
     items.regResources()
   }
 }
