@@ -43,6 +43,7 @@ class Items(blocks : Blocks) {
     regItem(silver_ore)
     regItem(silver_block)
     regItem(prismarine_fence)
+    regItem(cleaned_cobblestone)
   }
 
   def regResources() : Unit = {
@@ -57,5 +58,6 @@ class Items(blocks : Blocks) {
     regModel(silver_ore)
     regModel(silver_block)
     regModel(prismarine_fence)
+    regModel(cleaned_cobblestone)
   }
 }
