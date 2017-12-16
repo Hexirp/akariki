@@ -5,20 +5,19 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 /**
  * {@link Boot} connects Forge's initialization events to {@link Initializer} and works as a main class of akariki.
  */
-@Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
+@Mod(modid = Boot.MOD_ID, version = "0.0.0-alpha-1", dependencies = "required-after:forge@[14.23.0.2491,)")
 public class Boot {
-    private final Logger log = LogManager.getFormatterLogger(Metadata.MOD_ID);
-    private final Initializer init = new Initializer(log);
+    public static final String MOD_ID = "akariki";
+
+    private final Context context = new Context(MOD_ID);
+    private final Initializer init = new Initializer(context);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        new Post(log).join();
+        new Post(context).join();
         init.preInit(event);
     }
 

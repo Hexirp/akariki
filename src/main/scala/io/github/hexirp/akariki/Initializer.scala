@@ -1,20 +1,15 @@
 package io.github.hexirp.akariki
 
-import net.minecraftforge.fml.common.event.{
-  FMLInitializationEvent,
-  FMLPostInitializationEvent,
-  FMLPreInitializationEvent
-}
-
-import org.apache.logging.log4j.Logger
+import net.minecraftforge.fml.common.event.{ //
+  FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
 
 /** [[Initializer]] receives Forge's initialization events.
   *
   */
-class Initializer (log : Logger) {
-  def preInit(event : FMLPreInitializationEvent) : Unit = log.info("preInit")
+class Initializer (context : Context) {
+  def preInit(event : FMLPreInitializationEvent) : Unit = context.info("preInit")
 
-  def init(event : FMLInitializationEvent) : Unit = log.info("init")
+  def init(event : FMLInitializationEvent) : Unit = context.info("init")
 
-  def postInit(event : FMLPostInitializationEvent) : Unit = log.info("postInit")
+  def postInit(event : FMLPostInitializationEvent) : Unit = context.info("postInit")
 }
