@@ -9,26 +9,26 @@ import net.minecraftforge.event.RegistryEvent
 
 /** [[Subscriber]] receives Forge's events.
   *
-  * @param metadata
+  * @param context
   */
-class Subscriber(metadata : Metadata) {
-  val blocks : Blocks = new Blocks(metadata)
-  val items : Items = new Items(metadata, blocks)
+class Subscriber(context : Context) {
+  val blocks : Blocks = new Blocks(context)
+  val items : Items = new Items(context, blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = metadata.info("regRecipes")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = context.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
-    metadata.info("regItems")
+    context.info("regItems")
     items.regItems(event)
   }
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
-    metadata.info("regBlocks")
+    context.info("regBlocks")
     blocks.regBlocks(event)
   }
 
   def regModels(event : ModelRegistryEvent) : Unit = {
-    metadata.info("regModels")
+    context.info("regModels")
     items.regResources()
   }
 }

@@ -6,13 +6,13 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * {@link Metadata} is data of akariki.
+ * {@link Context} is data of akariki.
  */
-public class Metadata {
+public class Context {
     private final String id;
     private final Logger log;
 
-    public Metadata(String id) {
+    public Context(String id) {
         this.id = id;
         this.log = LogManager.getFormatterLogger(id);
     }

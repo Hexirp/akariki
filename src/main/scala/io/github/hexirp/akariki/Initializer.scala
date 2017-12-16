@@ -6,10 +6,10 @@ import net.minecraftforge.fml.common.event.{ //
 /** [[Initializer]] receives Forge's initialization events.
   *
   */
-class Initializer (metadata : Metadata) {
-  def preInit(event : FMLPreInitializationEvent) : Unit = metadata.info("preInit")
+class Initializer (context : Context) {
+  def preInit(event : FMLPreInitializationEvent) : Unit = context.info("preInit")
 
-  def init(event : FMLInitializationEvent) : Unit = metadata.info("init")
+  def init(event : FMLInitializationEvent) : Unit = context.info("init")
 
-  def postInit(event : FMLPostInitializationEvent) : Unit = metadata.info("postInit")
+  def postInit(event : FMLPostInitializationEvent) : Unit = context.info("postInit")
 }
