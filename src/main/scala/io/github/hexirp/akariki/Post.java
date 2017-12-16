@@ -9,16 +9,14 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import org.apache.logging.log4j.Logger;
-
 /**
  * {@link Post} connects Forge's events to {@link Subscriber}.
  */
 public class Post {
     private final Subscriber subs;
 
-    public Post(Logger log) {
-        this.subs = new Subscriber(log);
+    public Post(Context context) {
+        this.subs = new Subscriber(context);
     }
 
     public void join() {

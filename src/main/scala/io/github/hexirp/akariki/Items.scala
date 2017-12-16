@@ -12,25 +12,25 @@ import net.minecraftforge.event.RegistryEvent
   *
   * @param blocks
   */
-class Items(blocks : Blocks) {
+class Items(context : Context, blocks : Blocks) {
   val sample : Item = new Item()
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "sample"))
+    .setRegistryName(context.newResourceLocation("sample"))
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
   val silver_ingot : Item = new Item()
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ingot"))
+    .setRegistryName(context.newResourceLocation("silver_ingot"))
     .setCreativeTab(CreativeTabs.MATERIALS)
     .setUnlocalizedName("silver_ingot")
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_ore"))
+    .setRegistryName(context.newResourceLocation("silver_ore"))
 
   val silver_block : Item = new ItemBlock(blocks.silver_block)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "silver_block"))
+    .setRegistryName(context.newResourceLocation("silver_block"))
 
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
+    .setRegistryName(context.newResourceLocation("prismarine_fence"))
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
