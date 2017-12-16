@@ -32,6 +32,9 @@ class Items(context : Context, blocks : Blocks) {
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
     .setRegistryName(context.newResourceLocation("prismarine_fence"))
 
+  val cleaned_cobblestone : Item = new ItemBlock(blocks.cleaned_cobblestone)
+    .setRegistryName(context.newResourceLocation("cleaned_cobblestone"))
+
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
@@ -40,6 +43,7 @@ class Items(context : Context, blocks : Blocks) {
     regItem(silver_ore)
     regItem(silver_block)
     regItem(prismarine_fence)
+    regItem(cleaned_cobblestone)
   }
 
   def regResources() : Unit = {
@@ -54,5 +58,6 @@ class Items(context : Context, blocks : Blocks) {
     regModel(silver_ore)
     regModel(silver_block)
     regModel(prismarine_fence)
+    regModel(cleaned_cobblestone)
   }
 }
