@@ -12,10 +12,11 @@ import org.apache.logging.log4j.Logger
 /** [[Subscriber]] receives Forge's events.
   *
   * @param log
-  * @param items
-  * @param blocks
   */
-class Subscriber(log : Logger, items : Items, blocks : Blocks) {
+class Subscriber(log : Logger) {
+  val blocks : Blocks = new Blocks()
+  val items : Items = new Items(blocks)
+
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {

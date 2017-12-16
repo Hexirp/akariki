@@ -6,20 +6,13 @@ import net.minecraftforge.fml.common.event.{
   FMLPreInitializationEvent
 }
 
-import org.apache.logging.log4j.{LogManager, Logger}
+import org.apache.logging.log4j.Logger
 
 /** [[Initializer]] receives Forge's initialization events.
   *
   */
-class Initializer {
-  val log : Logger = LogManager.getFormatterLogger(Metadata.MOD_ID)
-
-  def preInit(event : FMLPreInitializationEvent) : Unit = {
-    val blocks = new Blocks()
-    val items = new Items(blocks)
-    new Post(log, items, blocks).join()
-    log.info("preInit")
-  }
+class Initializer (log : Logger) {
+  def preInit(event : FMLPreInitializationEvent) : Unit = log.info("preInit")
 
   def init(event : FMLInitializationEvent) : Unit = log.info("init")
 
