@@ -25,9 +25,9 @@ class Blocks {
     .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
     .setUnlocalizedName("prismarine_fence")
 
-  val cleaned_cobble_stone : Block = new Block(Material.ROCK)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "cleaned_cobble_stone"))
-    .setUnlocalizedName("cleaned_cobble_stone")
+  val cleaned_cobblestone : Block = new Block(Material.ROCK)
+    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "cleaned_cobblestone"))
+    .setUnlocalizedName("cleaned_cobblestone")
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
     def regBlock(block : Block) : Unit = event.getRegistry.register(block)

@@ -32,8 +32,8 @@ class Items(blocks : Blocks) {
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
     .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "prismarine_fence"))
 
-  val cleaned_cobble_stone : Item = new ItemBlock(blocks.cleaned_cobble_stone)
-    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "cleaned_cobble_stone"))
+  val cleaned_cobblestone : Item = new ItemBlock(blocks.cleaned_cobblestone)
+    .setRegistryName(new ResourceLocation(Metadata.MOD_ID, "cleaned_cobblestone"))
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
