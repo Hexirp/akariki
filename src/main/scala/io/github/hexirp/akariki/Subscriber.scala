@@ -15,7 +15,7 @@ class Subscriber(metadata : Metadata) {
   val blocks : Blocks = new Blocks()
   val items : Items = new Items(blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = metadata.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     metadata.info("regItems")

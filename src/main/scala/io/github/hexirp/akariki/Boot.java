@@ -15,12 +15,12 @@ import org.apache.logging.log4j.Logger;
 public class Boot {
     public static final String MOD_ID = "akariki";
 
-    private final Logger log = LogManager.getFormatterLogger(MOD_ID);
-    private final Initializer init = new Initializer(log);
+    private final Metadata metadata = new Metadata(MOD_ID);
+    private final Initializer init = new Initializer(metadata);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        new Post(log).join();
+        new Post(metadata).join();
         init.preInit(event);
     }
 
