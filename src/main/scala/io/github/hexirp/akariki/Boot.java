@@ -13,10 +13,12 @@ import org.apache.logging.log4j.Logger;
  */
 @Mod(modid = Metadata.MOD_ID, version = Metadata.VERSION, dependencies = Metadata.DEPENDS)
 public class Boot {
-    private final Initializer init = new Initializer();
+    private final Logger log = LogManager.getFormatterLogger(Metadata.MOD_ID);
+    private final Initializer init = new Initializer(log);
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        new Post(log).join();
         init.preInit(event);
     }
 
