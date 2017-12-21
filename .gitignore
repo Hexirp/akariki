@@ -122,3 +122,8 @@ gradle-app.setting
 
 ### But, I track my coding styles.
 !/.idea/codeStyles/
+
+## IDEA Module Settings
+
+akariki.iml
+akariki.ipr
