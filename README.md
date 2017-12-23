@@ -12,7 +12,7 @@
 
 事前に以下のことをやってください。
 
-* JDK 8をダウンロードしてJAVA_HOMEを設定する。
+* JDK 8をダウンロードして`JAVA_HOME`を設定する。
 * Minecraft Java Editionのバージョン1.12.2を起動しておく。
 
 ### 通常
@@ -21,7 +21,7 @@
 
 ### IDEA
 
-「通常」が終わった後、IntelliJ IDEAを起動してImport ProjectでGradleプロジェクトとしてインポートしてください。処理が全部終わったら一度プロジェクトを閉じて、`getIntelliJRuns`を実行してください。
+「通常」が終わった後、IntelliJ IDEAを起動してImport ProjectでGradleプロジェクトとしてインポートしてください。処理が全部終わったら一度プロジェクトを閉じて、`getIntelliJRuns`タスクを実行してください。
 
 ### eclipse
 
