@@ -10,15 +10,22 @@
 
 ## 開発
 
-Java 8が必要です。まず、このリポジトリをクローンしてください。その後に`setupDecompWorkspace`タスクを実行してください。これにはかなりのメモリが必要なので注意してください。
+事前に以下のことをやってください。
+
+* JDK 8をダウンロードしてJAVA_HOMEを設定する。
+* Minecraft Java Editionのバージョン1.12.2を起動しておく。
+
+### 通常
+
+まず、このリポジトリをクローンしてください。その後に`setupDecompWorkspace`タスクを実行してください。これにはかなりのメモリが必要なので注意してください。
 
 ### IDEA
 
-上が終わった後に、IntelliJ IDEAを起動してImport ProjectでGradleプロジェクトとしてインポートしてください。処理が全部終わったら一度プロジェクトを閉じて、`getIntelliJRuns`を実行してください。
+「通常」が終わった後、IntelliJ IDEAを起動してImport ProjectでGradleプロジェクトとしてインポートしてください。処理が全部終わったら一度プロジェクトを閉じて、`getIntelliJRuns`を実行してください。
 
 ### eclipse
 
-`eclipse`タスクを実行した後にインポートしてください。
+「通常」が終わった後、`eclipse`タスクを実行してEclipseからインポートしてください。
 
 ## ライセンス
 
