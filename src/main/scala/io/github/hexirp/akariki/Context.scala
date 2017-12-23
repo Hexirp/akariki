@@ -4,7 +4,7 @@ import net.minecraft.util.ResourceLocation
 
 import org.apache.logging.log4j.{LogManager, Logger}
 
-/** [Context] is data of akariki.
+/** [[Context]] is data of akariki.
   *
   * @param id The ID of a MOD
   */
