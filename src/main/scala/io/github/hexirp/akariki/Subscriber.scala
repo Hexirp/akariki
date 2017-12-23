@@ -9,7 +9,7 @@ import net.minecraftforge.event.RegistryEvent
 
 /** [[Subscriber]] receives Forge's events.
   *
-  * @param context
+  * @param context The context of initialization
   */
 class Subscriber(context : Context) {
   val blocks : Blocks = new Blocks(context)

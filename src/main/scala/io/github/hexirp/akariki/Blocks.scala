@@ -9,6 +9,7 @@ import net.minecraftforge.event.RegistryEvent
 
 /** [[Blocks]] manages blocks of akariki.
   *
+  * @param context The context of initialization
   */
 class Blocks(context : Context) {
   val silver_ore : Block = new Block(Material.ROCK)

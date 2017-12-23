@@ -10,7 +10,8 @@ import net.minecraftforge.event.RegistryEvent
 
 /** [[Items]] manages items of akariki.
   *
-  * @param blocks
+  * @param context The context of initialization
+  * @param blocks The blocks of akariki
   */
 class Items(context : Context, blocks : Blocks) {
   val sample : Item = new Item()
