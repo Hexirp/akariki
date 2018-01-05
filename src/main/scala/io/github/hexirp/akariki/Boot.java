@@ -11,7 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  */
 @Mod(modid = Boot.MOD_ID, version = "0.0.0-alpha-1", dependencies = "required-after:forge@[14.23.0.2491,)")
 public class Boot {
-    public static final String MOD_ID = "akariki";
+    static final String MOD_ID = "akariki";
 
     private final Context context = new Context(MOD_ID);
     private final Initializer init = new Initializer(context);
