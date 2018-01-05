@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "akariki:make_chisel",
+  "pattern": [
+    "A ",
+    " B"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot",
+      "data": 0
+    },
+    "B": {
+      "item": "minecraft:stick",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "akariki:chisel"
+  }
+}
