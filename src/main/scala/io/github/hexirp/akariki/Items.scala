@@ -24,6 +24,11 @@ class Items(context : Context, blocks : Blocks) {
     .setCreativeTab(CreativeTabs.MATERIALS)
     .setUnlocalizedName("silver_ingot")
 
+  val chisel : Item = new Item()
+    .setRegistryName(context.newResourceLocation("chisel"))
+    .setCreativeTab(CreativeTabs.TOOLS)
+    .setUnlocalizedName("chisel")
+
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
     .setRegistryName(context.newResourceLocation("silver_ore"))
 
@@ -41,6 +46,7 @@ class Items(context : Context, blocks : Blocks) {
 
     regItem(sample)
     regItem(silver_ingot)
+    regItem(chisel)
     regItem(silver_ore)
     regItem(silver_block)
     regItem(prismarine_fence)
@@ -56,6 +62,7 @@ class Items(context : Context, blocks : Blocks) {
 
     regModel(sample)
     regModel(silver_ingot)
+    regModel(chisel)
     regModel(silver_ore)
     regModel(silver_block)
     regModel(prismarine_fence)
