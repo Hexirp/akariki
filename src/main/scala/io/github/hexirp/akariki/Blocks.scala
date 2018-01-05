@@ -1,9 +1,8 @@
 package io.github.hexirp.akariki
 
-import net.minecraft.block.{Block, BlockFence}
 import net.minecraft.block.material.{MapColor, Material}
+import net.minecraft.block.{Block, BlockFence}
 import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.util.ResourceLocation
 
 import net.minecraftforge.event.RegistryEvent
 

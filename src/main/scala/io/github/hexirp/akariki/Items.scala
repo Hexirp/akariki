@@ -3,7 +3,6 @@ package io.github.hexirp.akariki
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.{Item, ItemBlock}
-import net.minecraft.util.ResourceLocation
 
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
@@ -11,7 +10,7 @@ import net.minecraftforge.event.RegistryEvent
 /** [[Items]] manages items of akariki.
   *
   * @param context The context of initialization
-  * @param blocks The blocks of akariki
+  * @param blocks  The blocks of akariki
   */
 class Items(context : Context, blocks : Blocks) {
   val sample : Item = new Item()

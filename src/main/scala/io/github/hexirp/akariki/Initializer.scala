@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.{ //
   *
   * @param context The context of initialization
   */
-class Initializer (context : Context) {
+class Initializer(context : Context) {
   def preInit(event : FMLPreInitializationEvent) : Unit = context.info("preInit")
 
   def init(event : FMLInitializationEvent) : Unit = context.info("init")
