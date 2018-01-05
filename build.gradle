@@ -59,5 +59,6 @@ dependencies {
     // ### Notice ###
     // "forgeSrc:1.12.2-14.23.1.2555" use "scala-library:2.11.1".
     // But, "akariki" use "scala-library:2.11.5" for an effect of https://github.com/Hexirp/akariki/issues/13
+    // Welcome to Jar HELL!
     compile 'org.scala-lang:scala-library:2.11.5'
 }
