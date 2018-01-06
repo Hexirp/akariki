@@ -18,11 +18,6 @@ class Items(context : Context, blocks : Blocks) {
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
-  val silver_ingot : Item = new Item()
-    .setRegistryName(context.newResourceLocation("silver_ingot"))
-    .setCreativeTab(CreativeTabs.MATERIALS)
-    .setUnlocalizedName("silver_ingot")
-
   val chisel : Item = new Item()
     .setRegistryName(context.newResourceLocation("chisel"))
     .setCreativeTab(CreativeTabs.TOOLS)
@@ -32,6 +27,11 @@ class Items(context : Context, blocks : Blocks) {
     .setRegistryName(context.newResourceLocation("wrench"))
     .setCreativeTab(CreativeTabs.TOOLS)
     .setUnlocalizedName("wrench")
+
+  val silver_ingot : Item = new Item()
+    .setRegistryName(context.newResourceLocation("silver_ingot"))
+    .setCreativeTab(CreativeTabs.MATERIALS)
+    .setUnlocalizedName("silver_ingot")
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
     .setRegistryName(context.newResourceLocation("silver_ore"))
@@ -49,9 +49,9 @@ class Items(context : Context, blocks : Blocks) {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
     regItem(sample)
-    regItem(silver_ingot)
     regItem(chisel)
     regItem(wrench)
+    regItem(silver_ingot)
     regItem(silver_ore)
     regItem(silver_block)
     regItem(prismarine_fence)
@@ -66,9 +66,9 @@ class Items(context : Context, blocks : Blocks) {
       setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
     regModel(sample)
-    regModel(silver_ingot)
     regModel(chisel)
     regModel(wrench)
+    regModel(silver_ingot)
     regModel(silver_ore)
     regModel(silver_block)
     regModel(prismarine_fence)
