@@ -1,9 +1,10 @@
 {
   "type": "forge:ore_shaped",
-  "group": "akariki:make_chisel",
+  "group": "akariki:make_wrench",
   "pattern": [
-    "A ",
-    " A"
+    " A ",
+    "AA ",
+    "  A"
   ],
   "key": {
     "A": {
@@ -12,6 +13,6 @@
     }
   },
   "result": {
-    "item": "akariki:chisel"
+    "item": "akariki:wrench"
   }
 }
