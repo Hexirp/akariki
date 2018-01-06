@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shaped",
+  "group": "akariki:make_wrench",
+  "pattern": [
+    " A ",
+    "AA ",
+    "  A"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot",
+      "data": 0
+    }
+  },
+  "result": {
+    "item": "akariki:wrench"
+  }
+}
