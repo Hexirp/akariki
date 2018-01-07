@@ -7,12 +7,14 @@ import net.minecraft.item.{Item, ItemBlock}
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
+import org.apache.logging.log4j.Logger
+
 /** [[Items]] manages items of akariki.
   *
   * @param context The context of initialization
   * @param blocks  The blocks of akariki
   */
-class Items(context : Context, blocks : Blocks) {
+class Items(context : Context, log : Logger, blocks : Blocks) {
   val sample : Item = new Item()
     .setRegistryName(context.newResourceLocation("sample"))
     .setCreativeTab(CreativeTabs.MISC)
