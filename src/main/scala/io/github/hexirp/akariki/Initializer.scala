@@ -10,7 +10,7 @@ import org.apache.logging.log4j.Logger
   *
   * @param context The context of initialization
   */
-class Initializer(context : Context, metadata : Metadata, log : Logger) {
+class Initializer(metadata : Metadata, log : Logger) {
   def preInit(event : FMLPreInitializationEvent) : Unit = {
     log.info("preInit")
 

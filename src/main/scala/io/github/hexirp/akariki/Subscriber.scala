@@ -13,9 +13,9 @@ import org.apache.logging.log4j.Logger
   *
   * @param context The context of initialization
   */
-class Subscriber(context : Context, log : Logger) {
-  val blocks : Blocks = new Blocks(context, log)
-  val items : Items = new Items(context, log, blocks)
+class Subscriber(metadata : Metadata, log : Logger) {
+  val blocks : Blocks = new Blocks(metadata, log)
+  val items : Items = new Items(metadata, log, blocks)
 
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 

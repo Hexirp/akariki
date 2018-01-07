@@ -23,14 +23,13 @@ public class Boot {
     public static final String NAME = "Akariki";
     public static final String VERSION = "0.1.0-alpha-1";
 
-    private final Context context = new Context(MOD_ID);
     private final Metadata metadata = new Metadata(MOD_ID, NAME, VERSION);
     private final Logger log = LogManager.getFormatterLogger(MOD_ID);
-    private final Initializer init = new Initializer(context, metadata, log);
+    private final Initializer init = new Initializer(metadata, log);
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        new Post(context, log).join();
+        new Post(metadata, log).join();
         init.preInit(event);
     }
 
