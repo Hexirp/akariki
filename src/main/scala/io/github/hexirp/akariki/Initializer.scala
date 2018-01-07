@@ -9,12 +9,12 @@ import net.minecraftforge.fml.common.event.{ //
   * @param context The context of initialization
   */
 class Initializer(context : Context) {
-  def preInit(event : FMLPreInitializationEvent, id : String, version : String) : Unit = {
+  def preInit(event : FMLPreInitializationEvent, id : String, name : String, version : String) : Unit = {
     context.info("preInit")
 
     val metadata : ModMetadata = event.getModMetadata
     metadata.modId = id
-    metadata.name = "Akariki"
+    metadata.name = name
     metadata.description = "Fill the world with circuits."
     metadata.url = "https://github.com/Hexirp/akariki"
     metadata.version = version
