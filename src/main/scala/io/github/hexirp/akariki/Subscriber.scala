@@ -17,20 +17,20 @@ class Subscriber(context : Context, log : Logger) {
   val blocks : Blocks = new Blocks(context, log)
   val items : Items = new Items(context, log, blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = context.info("regRecipes")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
-    context.info("regItems")
+    log.info("regItems")
     items.regItems(event)
   }
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
-    context.info("regBlocks")
+    log.info("regBlocks")
     blocks.regBlocks(event)
   }
 
   def regModels(event : ModelRegistryEvent) : Unit = {
-    context.info("regModels")
+    log.info("regModels")
     items.regResources()
   }
 }
