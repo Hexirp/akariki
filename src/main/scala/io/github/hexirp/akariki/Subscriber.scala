@@ -7,13 +7,15 @@ import net.minecraft.item.crafting.IRecipe
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.event.RegistryEvent
 
+import org.apache.logging.log4j.Logger
+
 /** [[Subscriber]] receives Forge's events.
   *
   * @param context The context of initialization
   */
-class Subscriber(context : Context) {
-  val blocks : Blocks = new Blocks(context)
-  val items : Items = new Items(context, blocks)
+class Subscriber(context : Context, log : Logger) {
+  val blocks : Blocks = new Blocks(context, log)
+  val items : Items = new Items(context, log, blocks)
 
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = context.info("regRecipes")
 

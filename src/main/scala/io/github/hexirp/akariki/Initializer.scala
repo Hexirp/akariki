@@ -4,11 +4,13 @@ import net.minecraftforge.fml.common.ModMetadata
 import net.minecraftforge.fml.common.event.{ //
   FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
 
+import org.apache.logging.log4j.Logger
+
 /** [[Initializer]] receives Forge's initialization events.
   *
   * @param context The context of initialization
   */
-class Initializer(context : Context) {
+class Initializer(context : Context, log : Logger) {
   def preInit(event : FMLPreInitializationEvent, id : String, version : String) : Unit = {
     context.info("preInit")
 

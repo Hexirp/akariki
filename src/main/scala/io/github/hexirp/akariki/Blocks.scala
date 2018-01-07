@@ -6,11 +6,13 @@ import net.minecraft.creativetab.CreativeTabs
 
 import net.minecraftforge.event.RegistryEvent
 
+import org.apache.logging.log4j.Logger
+
 /** [[Blocks]] manages blocks of akariki.
   *
   * @param context The context of initialization
   */
-class Blocks(context : Context) {
+class Blocks(context : Context, log : Logger) {
   val silver_ore : Block = new Block(Material.ROCK)
     .setRegistryName(context.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
