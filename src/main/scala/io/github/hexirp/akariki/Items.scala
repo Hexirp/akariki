@@ -11,7 +11,8 @@ import org.apache.logging.log4j.Logger
 
 /** [[Items]] manages items of akariki.
   *
-  * @param context The context of initialization
+  * @param metadata
+  * @param log
   * @param blocks  The blocks of akariki
   */
 class Items(metadata : Metadata, log : Logger, blocks : Blocks) {

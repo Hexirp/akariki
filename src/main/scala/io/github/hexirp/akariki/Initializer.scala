@@ -8,7 +8,8 @@ import org.apache.logging.log4j.Logger
 
 /** [[Initializer]] receives Forge's initialization events.
   *
-  * @param context The context of initialization
+  * @param metadata
+  * @param log
   */
 class Initializer(metadata : Metadata, log : Logger) {
   def preInit(event : FMLPreInitializationEvent) : Unit = {

@@ -11,7 +11,8 @@ import org.apache.logging.log4j.Logger
 
 /** [[Subscriber]] receives Forge's events.
   *
-  * @param context The context of initialization
+  * @param metadata
+  * @param log
   */
 class Subscriber(metadata : Metadata, log : Logger) {
   val blocks : Blocks = new Blocks(metadata, log)
