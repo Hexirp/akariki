@@ -7,43 +7,46 @@ import net.minecraft.item.{Item, ItemBlock}
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
+import org.apache.logging.log4j.Logger
+
 /** [[Items]] manages items of akariki.
   *
-  * @param context The context of initialization
+  * @param metadata
+  * @param log
   * @param blocks  The blocks of akariki
   */
-class Items(context : Context, blocks : Blocks) {
+class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
   val sample : Item = new Item()
-    .setRegistryName(context.newResourceLocation("sample"))
+    .setRegistryName(metadata.newResourceLocation("sample"))
     .setCreativeTab(CreativeTabs.MISC)
     .setUnlocalizedName("sample")
 
   val chisel : Item = new Item()
-    .setRegistryName(context.newResourceLocation("chisel"))
+    .setRegistryName(metadata.newResourceLocation("chisel"))
     .setCreativeTab(CreativeTabs.TOOLS)
     .setUnlocalizedName("chisel")
 
   val wrench : Item = new Item()
-    .setRegistryName(context.newResourceLocation("wrench"))
+    .setRegistryName(metadata.newResourceLocation("wrench"))
     .setCreativeTab(CreativeTabs.TOOLS)
     .setUnlocalizedName("wrench")
 
   val silver_ingot : Item = new Item()
-    .setRegistryName(context.newResourceLocation("silver_ingot"))
+    .setRegistryName(metadata.newResourceLocation("silver_ingot"))
     .setCreativeTab(CreativeTabs.MATERIALS)
     .setUnlocalizedName("silver_ingot")
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
-    .setRegistryName(context.newResourceLocation("silver_ore"))
+    .setRegistryName(metadata.newResourceLocation("silver_ore"))
 
   val silver_block : Item = new ItemBlock(blocks.silver_block)
-    .setRegistryName(context.newResourceLocation("silver_block"))
+    .setRegistryName(metadata.newResourceLocation("silver_block"))
 
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
-    .setRegistryName(context.newResourceLocation("prismarine_fence"))
+    .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
 
   val cleaned_cobblestone : Item = new ItemBlock(blocks.cleaned_cobblestone)
-    .setRegistryName(context.newResourceLocation("cleaned_cobblestone"))
+    .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)

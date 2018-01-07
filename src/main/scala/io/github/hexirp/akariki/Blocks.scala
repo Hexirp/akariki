@@ -6,27 +6,30 @@ import net.minecraft.creativetab.CreativeTabs
 
 import net.minecraftforge.event.RegistryEvent
 
+import org.apache.logging.log4j.Logger
+
 /** [[Blocks]] manages blocks of akariki.
   *
-  * @param context The context of initialization
+  * @param metadata
+  * @param log
   */
-class Blocks(context : Context) {
+class Blocks(metadata : Metadata, log : Logger) {
   val silver_ore : Block = new Block(Material.ROCK)
-    .setRegistryName(context.newResourceLocation("silver_ore"))
+    .setRegistryName(metadata.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
 
   val silver_block : Block = new Block(Material.ROCK)
-    .setRegistryName(context.newResourceLocation("silver_block"))
+    .setRegistryName(metadata.newResourceLocation("silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
-    .setRegistryName(context.newResourceLocation("prismarine_fence"))
+    .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
     .setUnlocalizedName("prismarine_fence")
 
   val cleaned_cobblestone : Block = new Block(Material.ROCK)
-    .setRegistryName(context.newResourceLocation("cleaned_cobblestone"))
+    .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
     .setUnlocalizedName("cleaned_cobblestone")
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
