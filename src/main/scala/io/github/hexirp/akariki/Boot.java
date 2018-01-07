@@ -24,7 +24,7 @@ public class Boot {
     public static final String VERSION = "0.1.0-alpha-1";
 
     private final Metadata metadata = new Metadata(MOD_ID, NAME, VERSION);
-    private final Logger log = LogManager.getFormatterLogger(MOD_ID);
+    private final Logger log = metadata.newLogger();
     private final Initializer init = new Initializer(metadata, log);
 
     @EventHandler
