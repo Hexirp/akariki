@@ -13,5 +13,5 @@ class Context(id : String) {
 
   def newResourceLocation(name : String) : ResourceLocation = new ResourceLocation(id, name)
 
-  def info(message : String) : Unit = log.info(message)
+  def info(message : String) : Unit = LogManager.getFormatterLogger(id).info(message)
 }
