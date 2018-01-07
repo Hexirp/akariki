@@ -24,7 +24,7 @@ public class Boot {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         new Post(context).join();
-        init.preInit(event);
+        init.preInit(event, MOD_ID, VERSION);
     }
 
     @EventHandler
