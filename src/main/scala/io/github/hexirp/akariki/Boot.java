@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  */
 @Mod(
         modid = Boot.MOD_ID,
+        name = "Akariki",
         version = Boot.VERSION,
         dependencies = "required-after:forge@[14.23.1.2555,)",
         acceptedMinecraftVersions = "1.12.2")
