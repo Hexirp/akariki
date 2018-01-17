@@ -16,13 +16,13 @@ import org.apache.logging.log4j.Logger
   * @param blocks  The blocks of akariki
   */
 class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
-  val sample : Item = new SimpleItem(CreativeTabs.MISC, "sample", metadata).item
+  val sample : Item = new ItemSimple(CreativeTabs.MISC, "sample", metadata).item
 
-  val chisel : Item = new SimpleItem(CreativeTabs.TOOLS, "chisel", metadata).item
+  val chisel : Item = new ItemSimple(CreativeTabs.TOOLS, "chisel", metadata).item
 
-  val wrench : Item = new SimpleItem(CreativeTabs.TOOLS, "wrench", metadata).item
+  val wrench : Item = new ItemSimple(CreativeTabs.TOOLS, "wrench", metadata).item
 
-  val silver_ingot : Item = new SimpleItem(CreativeTabs.MATERIALS, "silver_ingot", metadata).item
+  val silver_ingot : Item = new ItemSimple(CreativeTabs.MATERIALS, "silver_ingot", metadata).item
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
