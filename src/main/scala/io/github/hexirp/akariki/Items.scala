@@ -78,3 +78,15 @@ class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
     regModel(cleaned_cobblestone)
   }
 }
+
+class SimpleItem(tab : CreativeTabs, name : String, metadata : Metadata) {
+  val item : Item = new Item()
+    .setRegistryName(metadata.newResourceLocation(name))
+    .setCreativeTab(tab)
+    .setUnlocalizedName(name)
+
+  def regItem(event : RegistryEvent.Register[Item]) : Unit = event.getRegistry.register(item)
+
+  def regModel() : Unit =
+    ModelLoader.setCustomModelResourceLocation(item, 0, new ModelResourceLocation(item.getRegistryName, "inventory"))
+}
