@@ -2,14 +2,15 @@ package io.github.hexirp.akariki
 
 import net.minecraftforge.fml.common.ModMetadata
 import net.minecraftforge.fml.common.event.{ //
-  FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent}
+  FMLInitializationEvent, FMLPostInitializationEvent, FMLPreInitializationEvent
+}
 
 import org.apache.logging.log4j.Logger
 
 /** [[Initializer]] receives Forge's initialization events.
   *
-  * @param metadata
-  * @param log
+  * @param metadata The metadata of akariki
+  * @param log      The logger of initialization
   */
 class Initializer(metadata : Metadata, log : Logger) {
   def preInit(event : FMLPreInitializationEvent) : Unit = {

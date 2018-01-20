@@ -11,36 +11,16 @@ import org.apache.logging.log4j.Logger
 
 /** [[Items]] manages items of akariki.
   *
-  * @param metadata
-  * @param log
-  * @param blocks  The blocks of akariki
+  * @param metadata The data of akariki
+  * @param log      The logger of initialization
+  * @param blocks   The blocks of akariki
   */
 class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
-  val sample : Item = new Item()
-    .setRegistryName(metadata.newResourceLocation("sample"))
-    .setCreativeTab(CreativeTabs.MISC)
-    .setUnlocalizedName("sample")
+  val sample : Item = new ItemSimple(CreativeTabs.MISC, "sample", metadata).item
 
-  val chisel : Item = new Item()
-    .setRegistryName(metadata.newResourceLocation("chisel"))
-    .setCreativeTab(CreativeTabs.TOOLS)
-    .setUnlocalizedName("chisel")
+  val chisel : Item = new ItemSimple(CreativeTabs.TOOLS, "chisel", metadata).item
 
-  val wrench : Item = new Item()
-    .setRegistryName(metadata.newResourceLocation("wrench"))
-    .setCreativeTab(CreativeTabs.TOOLS)
-    .setUnlocalizedName("wrench")
-
-  val silver_ingot : Item = new Item()
-    .setRegistryName(metadata.newResourceLocation("silver_ingot"))
-    .setCreativeTab(CreativeTabs.MATERIALS)
-    .setUnlocalizedName("silver_ingot")
-
-  val silver_ore : Item = new ItemBlock(blocks.silver_ore)
-    .setRegistryName(metadata.newResourceLocation("silver_ore"))
-
-  val silver_block : Item = new ItemBlock(blocks.silver_block)
-    .setRegistryName(metadata.newResourceLocation("silver_block"))
+  val wrench : Item = new ItemSimple(CreativeTabs.TOOLS, "wrench", metadata).item
 
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
     .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
@@ -54,9 +34,6 @@ class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
     regItem(sample)
     regItem(chisel)
     regItem(wrench)
-    regItem(silver_ingot)
-    regItem(silver_ore)
-    regItem(silver_block)
     regItem(prismarine_fence)
     regItem(cleaned_cobblestone)
   }
@@ -71,9 +48,6 @@ class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
     regModel(sample)
     regModel(chisel)
     regModel(wrench)
-    regModel(silver_ingot)
-    regModel(silver_ore)
-    regModel(silver_block)
     regModel(prismarine_fence)
     regModel(cleaned_cobblestone)
   }
