@@ -11,8 +11,8 @@ import org.apache.logging.log4j.Logger
 
 /** [[Subscriber]] receives Forge's events.
   *
-  * @param metadata
-  * @param log
+  * @param metadata The metadata of akariki
+  * @param log      The logger of initialization
   */
 class Subscriber(metadata : Metadata, log : Logger) {
   val blocks : Blocks = new Blocks(metadata, log)

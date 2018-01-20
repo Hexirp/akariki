@@ -11,9 +11,9 @@ import org.apache.logging.log4j.Logger
 
 /** [[Items]] manages items of akariki.
   *
-  * @param metadata
-  * @param log
-  * @param blocks  The blocks of akariki
+  * @param metadata The data of akariki
+  * @param log      The logger of initialization
+  * @param blocks   The blocks of akariki
   */
 class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
   val sample : Item = new ItemSimple(CreativeTabs.MISC, "sample", metadata).item
