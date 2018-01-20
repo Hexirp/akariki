@@ -17,12 +17,14 @@ import org.apache.logging.log4j.Logger
 class Subscriber(metadata : Metadata, log : Logger) {
   val blocks : Blocks = new Blocks(metadata, log)
   val items : Items = new Items(metadata, log, blocks)
+  val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     log.info("regItems")
     items.regItems(event)
+    silver_items.regItems(event)
   }
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
@@ -33,5 +35,6 @@ class Subscriber(metadata : Metadata, log : Logger) {
   def regModels(event : ModelRegistryEvent) : Unit = {
     log.info("regModels")
     items.regResources()
+    silver_items.regResources()
   }
 }
