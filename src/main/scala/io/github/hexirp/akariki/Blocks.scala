@@ -11,9 +11,8 @@ import org.apache.logging.log4j.Logger
 /** [[Blocks]] manages blocks of akariki.
   *
   * @param metadata The metadata of akariki
-  * @param log      The logger of initialization
   */
-class Blocks(metadata : Metadata, log : Logger) {
+class Blocks(metadata : Metadata) {
   val silver_ore : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
