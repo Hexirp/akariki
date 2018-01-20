@@ -12,14 +12,8 @@ import org.apache.logging.log4j.{LogManager, Logger}
   * @param name
   * @param version
   */
-class Metadata(id : String, name : String, version : String) {
+class Metadata(val id : String, val name : String, val version : String) {
   def newLogger : Logger = LogManager.getFormatterLogger(id)
 
   def newResourceLocation(resourceName : String) : ResourceLocation = new ResourceLocation(id, resourceName)
-
-  def set(metadata : ModMetadata) : Unit = {
-    metadata.modId = id
-    metadata.name = name
-    metadata.version = version
-  }
 }

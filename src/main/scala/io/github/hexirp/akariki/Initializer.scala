@@ -16,7 +16,9 @@ class Initializer(metadata : Metadata, log : Logger) {
     log.info("preInit")
 
     val prim_meta : ModMetadata = event.getModMetadata
-    metadata.set(prim_meta)
+    prim_meta.modId = metadata.id
+    prim_meta.name = metadata.name
+    prim_meta.version = metadata.version
     prim_meta.description = "Fill the world with circuits."
     prim_meta.url = "https://github.com/Hexirp/akariki"
     prim_meta.authorList.add("Hexirp")
