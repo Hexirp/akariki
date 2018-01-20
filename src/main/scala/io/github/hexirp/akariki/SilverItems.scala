@@ -7,6 +7,11 @@ import net.minecraft.item.{Item, ItemBlock}
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
 
+/** [[SilverItems]] manages items related to Silver.
+  *
+  * @param metadata The metadata of akariki
+  * @param blocks   The blocks of akariki
+  */
 class SilverItems(metadata : Metadata, blocks : Blocks) {
   val silver_ingot : Item = new ItemSimple(CreativeTabs.MATERIALS, "silver_ingot", metadata).item
 
