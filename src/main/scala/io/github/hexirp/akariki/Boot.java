@@ -21,7 +21,7 @@ import org.apache.logging.log4j.LogManager;
 public class Boot {
     public static final String MOD_ID = "akariki";
     public static final String NAME = "Akariki";
-    public static final String VERSION = "0.1.0-alpha-1";
+    public static final String VERSION = "0.1.0-a-10";
 
     private final Metadata metadata = new Metadata(MOD_ID, NAME, VERSION);
     private final Logger log = metadata.newLogger();
