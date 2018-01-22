@@ -1,11 +1,7 @@
 package io.github.hexirp.akariki
 
-import net.minecraft.client.renderer.block.model.ModelResourceLocation
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.{Item, ItemBlock}
-
-import net.minecraftforge.client.model.ModelLoader
-import net.minecraftforge.event.RegistryEvent
 
 import org.apache.logging.log4j.Logger
 
@@ -28,27 +24,19 @@ class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
   val cleaned_cobblestone : Item = new ItemBlock(blocks.cleaned_cobblestone)
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
 
-  def regItems(event : RegistryEvent.Register[Item]) : Unit = {
-    def regItem(item : Item) : Unit = event.getRegistry.register(item)
-
-    regItem(sample)
-    regItem(chisel)
-    regItem(wrench)
-    regItem(prismarine_fence)
-    regItem(cleaned_cobblestone)
+  def regItems(reg : Item => Unit) : Unit = {
+    reg(sample)
+    reg(chisel)
+    reg(wrench)
+    reg(prismarine_fence)
+    reg(cleaned_cobblestone)
   }
 
-  def regResources() : Unit = {
-    def setModel(item : Item, model : ModelResourceLocation) : Unit =
-      ModelLoader.setCustomModelResourceLocation(item, 0, model)
-
-    def regModel(item : Item) : Unit =
-      setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
-
-    regModel(sample)
-    regModel(chisel)
-    regModel(wrench)
-    regModel(prismarine_fence)
-    regModel(cleaned_cobblestone)
+  def regResources(reg : Item => Unit) : Unit = {
+    reg(sample)
+    reg(chisel)
+    reg(wrench)
+    reg(prismarine_fence)
+    reg(cleaned_cobblestone)
   }
 }

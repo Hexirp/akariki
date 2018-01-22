@@ -4,8 +4,6 @@ import net.minecraft.block.material.{MapColor, Material}
 import net.minecraft.block.{Block, BlockFence}
 import net.minecraft.creativetab.CreativeTabs
 
-import net.minecraftforge.event.RegistryEvent
-
 import org.apache.logging.log4j.Logger
 
 /** [[Blocks]] manages blocks of akariki.
@@ -32,12 +30,10 @@ class Blocks(metadata : Metadata, log : Logger) {
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
     .setUnlocalizedName("cleaned_cobblestone")
 
-  def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
-    def regBlock(block : Block) : Unit = event.getRegistry.register(block)
-
-    regBlock(silver_ore)
-    regBlock(silver_block)
-    regBlock(prismarine_fence)
-    regBlock(cleaned_cobblestone)
+  def regBlocks(reg : Block => Unit) : Unit = {
+    reg(silver_ore)
+    reg(silver_block)
+    reg(prismarine_fence)
+    reg(cleaned_cobblestone)
   }
 }
