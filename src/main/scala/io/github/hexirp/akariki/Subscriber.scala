@@ -17,8 +17,8 @@ import org.apache.logging.log4j.Logger
   * @param log      The logger of initialization
   */
 class Subscriber(metadata : Metadata, log : Logger) {
-  val blocks : Blocks = new Blocks(metadata, log)
-  val items : Items = new Items(metadata, log, blocks)
+  val blocks : Blocks = new Blocks(metadata)
+  val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")

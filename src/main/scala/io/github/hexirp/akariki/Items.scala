@@ -8,10 +8,9 @@ import org.apache.logging.log4j.Logger
 /** [[Items]] manages items of akariki.
   *
   * @param metadata The data of akariki
-  * @param log      The logger of initialization
   * @param blocks   The blocks of akariki
   */
-class Items(metadata : Metadata, log : Logger, blocks : Blocks) {
+class Items(metadata : Metadata, blocks : Blocks) {
   val sample : Item = new ItemSimple(CreativeTabs.MISC, "sample", metadata).item
 
   val chisel : Item = new ItemSimple(CreativeTabs.TOOLS, "chisel", metadata).item
