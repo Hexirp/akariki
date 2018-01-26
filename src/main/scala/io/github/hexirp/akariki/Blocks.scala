@@ -16,12 +16,13 @@ class Blocks(metadata : Metadata, log : Logger) {
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
-    .setResistance(15)
+    .setResistance(15.0f)
 
   val silver_block : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
+    .setResistance(30.0f)
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
     .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
