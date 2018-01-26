@@ -28,11 +28,13 @@ class Blocks(metadata : Metadata, log : Logger) {
     .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
     .setCreativeTab(CreativeTabs.DECORATIONS)
     .setUnlocalizedName("prismarine_fence")
+    .setResistance(30.0f)
 
   val cleaned_cobblestone : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("cleaned_cobblestone")
+    .setResistance(30.0f)
 
   def regBlocks(reg : Block => Unit) : Unit = {
     reg(silver_ore)
