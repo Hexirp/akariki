@@ -2,8 +2,6 @@ package io.github.hexirp.akariki
 
 import net.minecraft.util.ResourceLocation
 
-import net.minecraftforge.fml.common.ModMetadata
-
 import org.apache.logging.log4j.{LogManager, Logger}
 
 /** [[Metadata]] is important data of MOD.

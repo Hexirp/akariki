@@ -4,8 +4,6 @@ import net.minecraft.block.material.{MapColor, Material}
 import net.minecraft.block.{Block, BlockFence}
 import net.minecraft.creativetab.CreativeTabs
 
-import org.apache.logging.log4j.Logger
-
 /** [[Blocks]] manages blocks of akariki.
   *
   * @param metadata The metadata of akariki

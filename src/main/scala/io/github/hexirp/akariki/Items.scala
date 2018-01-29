@@ -3,8 +3,6 @@ package io.github.hexirp.akariki
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.{Item, ItemBlock}
 
-import org.apache.logging.log4j.Logger
-
 /** [[Items]] manages items of akariki.
   *
   * @param metadata The data of akariki
