@@ -15,19 +15,29 @@ class Blocks(metadata : Metadata) {
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_ore")
+    .setHardness(3.0f)
+    .setResistance(15.0f)
 
   val silver_block : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("silver_block"))
     .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("silver_block")
+    .setHardness(4.0f)
+    .setResistance(30.0f)
 
   val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
     .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
+    .setCreativeTab(CreativeTabs.DECORATIONS)
     .setUnlocalizedName("prismarine_fence")
+    .setHardness(1.5f)
+    .setResistance(30.0f)
 
   val cleaned_cobblestone : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
+    .setCreativeTab(CreativeTabs.BUILDING_BLOCKS)
     .setUnlocalizedName("cleaned_cobblestone")
+    .setHardness(2.0f)
+    .setResistance(30.0f)
 
   def regBlocks(reg : Block => Unit) : Unit = {
     reg(silver_ore)
