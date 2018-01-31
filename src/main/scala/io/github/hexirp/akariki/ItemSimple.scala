@@ -9,7 +9,7 @@ import net.minecraft.item.Item
   * @param name     The name of it
   * @param metadata The metadata of akariki
   */
-class ItemSimple(tab : CreativeTabs, name : String, metadata : Metadata) {
+class ItemSimple(metadata: Metadata, name: String, tab: CreativeTabs) {
   val item : Item = new Item()
     .setRegistryName(metadata.newResourceLocation(name))
     .setCreativeTab(tab)

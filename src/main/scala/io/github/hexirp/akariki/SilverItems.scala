@@ -9,7 +9,7 @@ import net.minecraft.item.{Item, ItemBlock}
   * @param blocks   The blocks of akariki
   */
 class SilverItems(metadata : Metadata, blocks : Blocks) {
-  val silver_ingot : Item = new ItemSimple(CreativeTabs.MATERIALS, "silver_ingot", metadata).item
+  val silver_ingot : Item = new ItemSimple(metadata, "silver_ingot", CreativeTabs.MATERIALS).item
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
