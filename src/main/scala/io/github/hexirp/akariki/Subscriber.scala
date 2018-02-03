@@ -2,12 +2,13 @@ package io.github.hexirp.akariki
 
 import net.minecraft.block.Block
 import net.minecraft.client.renderer.block.model.ModelResourceLocation
-import net.minecraft.item.Item
+import net.minecraft.item.{Item, ItemStack}
 import net.minecraft.item.crafting.IRecipe
 
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
+import net.minecraftforge.fml.common.registry.GameRegistry
 
 import org.apache.logging.log4j.Logger
 
@@ -21,12 +22,17 @@ class Subscriber(metadata : Metadata, log : Logger) {
   val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = {
+    log.info("regRecipes")
+
+    GameRegistry.addSmelting(new ItemStack(silver_items.silver_ingot), new ItemStack(silver_items.silver_ore), 0.8f)
+  }
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
     log.info("regItems")
+
     items.regItems(regItem)
     silver_items.regItems(regItem)
   }
@@ -35,6 +41,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
     def regBlock(block : Block) : Unit = event.getRegistry.register(block)
 
     log.info("regBlocks")
+
     blocks.regBlocks(regBlock)
   }
 
@@ -46,6 +53,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
       setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
     log.info("regModels")
+
     items.regResources(regModel)
     silver_items.regResources(regModel)
   }
