@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Logger;
  * {@link Post} connects Forge's events to {@link Subscriber}.
  */
 public class Post {
-    private final Subscriber subs;
+    public final Subscriber subs;
 
     public Post(Metadata metadata, Logger log) {
         this.subs = new Subscriber(metadata, log);
