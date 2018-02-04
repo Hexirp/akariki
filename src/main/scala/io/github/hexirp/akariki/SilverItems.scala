@@ -1,7 +1,9 @@
 package io.github.hexirp.akariki
 
 import net.minecraft.creativetab.CreativeTabs
-import net.minecraft.item.{Item, ItemBlock}
+import net.minecraft.item.{Item, ItemBlock, ItemStack}
+
+import net.minecraftforge.fml.common.registry.GameRegistry
 
 /** [[SilverItems]] manages items related to Silver.
   *
@@ -16,6 +18,11 @@ class SilverItems(metadata : Metadata, blocks : Blocks) {
 
   val silver_block : Item = new ItemBlock(blocks.silver_block)
     .setRegistryName(metadata.newResourceLocation("silver_block"))
+
+  def regRecipe() : Unit = GameRegistry.addSmelting(
+    new ItemStack(silver_ore),
+    new ItemStack(silver_ingot),
+    0.8f)
 
   def regItems(reg : Item => Unit) : Unit = {
     reg(silver_ingot)
