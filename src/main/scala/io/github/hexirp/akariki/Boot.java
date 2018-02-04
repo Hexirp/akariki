@@ -35,8 +35,8 @@ public class Boot {
         post.join();
         init.preInit(event);
         GameRegistry.addSmelting(
-                new ItemStack(post.subs.silver_items().silver_ingot()),
                 new ItemStack(post.subs.silver_items().silver_ore()),
+                new ItemStack(post.subs.silver_items().silver_ingot()),
                 0.8f);
     }
 
