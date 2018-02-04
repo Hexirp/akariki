@@ -22,7 +22,11 @@ class Subscriber(metadata : Metadata, log : Logger) {
   val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = {
+    log.info("regRecipes")
+
+    GameRegistry.addSmelting(new ItemStack(silver_items.silver_ore), new ItemStack(silver_items.silver_ingot), 0.8f)
+  }
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)

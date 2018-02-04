@@ -1,13 +1,10 @@
 package io.github.hexirp.akariki;
 
-import net.minecraft.item.ItemStack;
-
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 import org.apache.logging.log4j.Logger;
 
@@ -34,10 +31,6 @@ public class Boot {
     public void preInit(FMLPreInitializationEvent event) {
         post.join();
         init.preInit(event);
-        GameRegistry.addSmelting(
-                new ItemStack(post.subs.silver_items().silver_ore()),
-                new ItemStack(post.subs.silver_items().silver_ingot()),
-                0.8f);
     }
 
     @EventHandler
