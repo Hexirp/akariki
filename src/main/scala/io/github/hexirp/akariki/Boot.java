@@ -30,7 +30,9 @@ public class Boot {
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         post.join();
+
         init.preInit(event);
+        post.regSmeltingRecipes(event);
     }
 
     @EventHandler

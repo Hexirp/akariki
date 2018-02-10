@@ -8,6 +8,7 @@ import net.minecraft.item.crafting.IRecipe
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 
 import org.apache.logging.log4j.Logger
 
@@ -21,11 +22,13 @@ class Subscriber(metadata : Metadata, log : Logger) {
   val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
-  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = {
-    log.info("regRecipes")
+  def regSmeltingRecipes(event : FMLPreInitializationEvent): Unit = {
+    log.info("regSmeltingRecipes")
 
-    silver_items.regRecipe()
+    silver_items.regSmeltingRecipes()
   }
+
+  def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
