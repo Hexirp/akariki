@@ -32,7 +32,6 @@ public class Boot {
         post.join();
 
         init.preInit(event);
-        post.regSmeltingRecipes();
     }
 
     @EventHandler

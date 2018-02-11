@@ -7,7 +7,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import org.apache.logging.log4j.Logger;
@@ -26,13 +25,10 @@ public class Post {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public void regSmeltingRecipes() {
-        subs.regSmeltingRecipes();
-    }
-
     @SubscribeEvent
     public void regRecipes(RegistryEvent.Register<IRecipe> event) {
         subs.regRecipes(event);
+        subs.regSmeltingRecipes();
     }
 
     @SubscribeEvent

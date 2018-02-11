@@ -8,7 +8,6 @@ import net.minecraft.item.crafting.IRecipe
 import net.minecraftforge.client.event.ModelRegistryEvent
 import net.minecraftforge.client.model.ModelLoader
 import net.minecraftforge.event.RegistryEvent
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 
 import org.apache.logging.log4j.Logger
 
