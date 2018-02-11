@@ -22,7 +22,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
   val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
-  def regSmeltingRecipes(event : FMLPreInitializationEvent): Unit = {
+  def regSmeltingRecipes(): Unit = {
     log.info("regSmeltingRecipes")
 
     silver_items.regSmeltingRecipes()

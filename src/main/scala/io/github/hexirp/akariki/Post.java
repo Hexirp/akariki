@@ -26,8 +26,8 @@ public class Post {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    public void regSmeltingRecipes(FMLPreInitializationEvent event) {
-        subs.regSmeltingRecipes(event);
+    public void regSmeltingRecipes() {
+        subs.regSmeltingRecipes();
     }
 
     @SubscribeEvent
