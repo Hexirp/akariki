@@ -28,6 +28,7 @@ public class Post {
     @SubscribeEvent
     public void regRecipes(RegistryEvent.Register<IRecipe> event) {
         subs.regRecipes(event);
+        subs.regSmeltingRecipes();
     }
 
     @SubscribeEvent

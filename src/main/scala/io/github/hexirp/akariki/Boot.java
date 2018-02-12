@@ -24,11 +24,13 @@ public class Boot {
 
     private final Metadata metadata = new Metadata(MOD_ID, NAME, VERSION);
     private final Logger log = metadata.newLogger();
+    private final Post post = new Post(metadata, log);
     private final Initializer init = new Initializer(metadata, log);
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        new Post(metadata, log).join();
+        post.join();
+
         init.preInit(event);
     }
 

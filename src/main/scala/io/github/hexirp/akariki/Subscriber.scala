@@ -21,12 +21,19 @@ class Subscriber(metadata : Metadata, log : Logger) {
   val items : Items = new Items(metadata, blocks)
   val silver_items : SilverItems = new SilverItems(metadata, blocks)
 
+  def regSmeltingRecipes(): Unit = {
+    log.info("regSmeltingRecipes")
+
+    silver_items.regSmeltingRecipes()
+  }
+
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
     def regItem(item : Item) : Unit = event.getRegistry.register(item)
 
     log.info("regItems")
+
     items.regItems(regItem)
     silver_items.regItems(regItem)
   }
@@ -35,6 +42,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
     def regBlock(block : Block) : Unit = event.getRegistry.register(block)
 
     log.info("regBlocks")
+
     blocks.regBlocks(regBlock)
   }
 
@@ -46,6 +54,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
       setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
     log.info("regModels")
+
     items.regResources(regModel)
     silver_items.regResources(regModel)
   }
