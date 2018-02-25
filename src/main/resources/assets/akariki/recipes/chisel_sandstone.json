@@ -1,0 +1,17 @@
+{
+  "type": "forge:ore_shapeless",
+  "group": "akariki:chisel_sandstone",
+  "ingredients": [
+    {
+      "item": "akariki:chisel",
+      "data": 0
+    },
+    {
+      "item": "minecraft:sandstone",
+      "data": 0
+    }
+  ],
+  "result": {
+    "item": "minecraft:chiseled_sandstone"
+  }
+}
