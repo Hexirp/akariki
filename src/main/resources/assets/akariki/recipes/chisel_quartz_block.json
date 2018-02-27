@@ -12,6 +12,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:chiseled_quartz_block"
+    "item": "minecraft:quartz_block",
+    "data": 1
   }
 }

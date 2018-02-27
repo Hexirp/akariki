@@ -12,6 +12,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:chiseled_sandstone"
+    "item": "minecraft:sandstone",
+    "data": 1
   }
 }
