@@ -9,11 +9,20 @@ import net.minecraft.item.{Item, ItemBlock}
   * @param blocks   The blocks of akariki
   */
 class Items(metadata : Metadata, blocks : Blocks) {
-  val sample : Item = Temp.newItemSimple(metadata, "sample", CreativeTabs.MISC)
+  val sample : Item = new Item()
+    .setRegistryName(metadata.newResourceLocation("sample"))
+    .setUnlocalizedName("sample")
+    .setCreativeTab(CreativeTabs.MISC)
 
-  val chisel : Item = Temp.newItemSimple(metadata, "chisel", CreativeTabs.TOOLS)
+  val chisel : Item = new Item()
+    .setRegistryName(metadata.newResourceLocation("chisel"))
+    .setUnlocalizedName("chisel")
+    .setCreativeTab(CreativeTabs.TOOLS)
 
-  val wrench : Item = Temp.newItemSimple(metadata, "wrench", CreativeTabs.TOOLS)
+  val wrench : Item = new Item()
+    .setRegistryName(metadata.newResourceLocation("wrench"))
+    .setUnlocalizedName("wrench")
+    .setCreativeTab(CreativeTabs.TOOLS)
 
   val prismarine_fence : Item = new ItemBlock(blocks.prismarine_fence)
     .setRegistryName(metadata.newResourceLocation("prismarine_fence"))

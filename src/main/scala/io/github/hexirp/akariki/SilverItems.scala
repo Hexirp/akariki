@@ -11,7 +11,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry
   * @param blocks   The blocks of akariki
   */
 class SilverItems(metadata : Metadata, blocks : Blocks) {
-  val silver_ingot : Item = Temp.newItemSimple(metadata, "silver_ingot", CreativeTabs.MATERIALS)
+  val silver_ingot : Item = new Item()
+    .setRegistryName(metadata.newResourceLocation("silver_ingot"))
+    .setUnlocalizedName("silver_ingot")
+    .setCreativeTab(CreativeTabs.MATERIALS)
 
   val silver_ore : Item = new ItemBlock(blocks.silver_ore)
     .setRegistryName(metadata.newResourceLocation("silver_ore"))
