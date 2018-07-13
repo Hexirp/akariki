@@ -47,5 +47,6 @@ class Blocks(metadata : Metadata) {
     reg(silver_block)
     reg(prismarine_fence)
     reg(cleaned_cobblestone)
+    reg(advanced_crafting_table)
   }
 }

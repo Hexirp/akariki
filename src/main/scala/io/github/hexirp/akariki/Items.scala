@@ -30,12 +30,16 @@ class Items(metadata : Metadata, blocks : Blocks) {
   val cleaned_cobblestone : Item = new ItemBlock(blocks.cleaned_cobblestone)
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
 
+  val advanced_crafting_table : Item = new ItemBlock(blocks.advanced_crafting_table)
+    .setRegistryName(metadata.newResourceLocation("advanced_crafting_table"))
+
   def regItems(reg : Item => Unit) : Unit = {
     reg(sample)
     reg(chisel)
     reg(wrench)
     reg(prismarine_fence)
     reg(cleaned_cobblestone)
+    reg(advanced_crafting_table)
   }
 
   def regResources(reg : Item => Unit) : Unit = {
@@ -44,5 +48,6 @@ class Items(metadata : Metadata, blocks : Blocks) {
     reg(wrench)
     reg(prismarine_fence)
     reg(cleaned_cobblestone)
+    reg(advanced_crafting_table)
   }
 }
