@@ -37,10 +37,16 @@ class Blocks(metadata : Metadata) {
     .setHardness(2.0f)
     .setResistance(30.0f)
 
+  val advanced_crafting_table : Block = new Block(Material.WOOD)
+    .setRegistryName(metadata.newResourceLocation("advanced_crafting_table"))
+    .setCreativeTab(CreativeTabs.DECORATIONS)
+    .setUnlocalizedName("advanced_crafting_table")
+
   def regBlocks(reg : Block => Unit) : Unit = {
     reg(silver_ore)
     reg(silver_block)
     reg(prismarine_fence)
     reg(cleaned_cobblestone)
+    reg(advanced_crafting_table)
   }
 }
