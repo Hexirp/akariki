@@ -23,12 +23,7 @@ class Blocks(metadata : Metadata) {
     .setHardness(4.0f)
     .setResistance(30.0f)
 
-  val prismarine_fence : Block = new BlockFence(Material.ROCK, MapColor.DIAMOND)
-    .setRegistryName(metadata.newResourceLocation("prismarine_fence"))
-    .setCreativeTab(CreativeTabs.DECORATIONS)
-    .setUnlocalizedName("prismarine_fence")
-    .setHardness(1.5f)
-    .setResistance(30.0f)
+  val prismarine_fence : Block = new PrismarineFence(metadata)
 
   val cleaned_cobblestone : Block = new Block(Material.ROCK)
     .setRegistryName(metadata.newResourceLocation("cleaned_cobblestone"))
