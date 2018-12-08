@@ -62,3 +62,8 @@ dependencies {
     // Welcome to Jar HELL!
     compile 'org.scala-lang:scala-library:2.11.5'
 }
+
+tasks.withType(Jar) {
+    compileScala.options.encoding = 'UTF-8'
+    // compileTestScala.options.encoding = 'UTF-8'
+}
