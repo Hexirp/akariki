@@ -30,7 +30,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
   def regRecipes(event : RegistryEvent.Register[IRecipe]) : Unit = log.info("regRecipes")
 
   def regItems(event : RegistryEvent.Register[Item]) : Unit = {
-    def regItem(item : Item) : Unit = event.getRegistry.register(item)
+    val regItem : Item => Unit = item => event.getRegistry.register(item)
 
     log.info("regItems")
 
@@ -39,7 +39,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
   }
 
   def regBlocks(event : RegistryEvent.Register[Block]) : Unit = {
-    def regBlock(block : Block) : Unit = event.getRegistry.register(block)
+    val regBlock : Block => Unit = block => event.getRegistry.register(block)
 
     log.info("regBlocks")
 
@@ -50,7 +50,7 @@ class Subscriber(metadata : Metadata, log : Logger) {
     def setModel(item : Item, model : ModelResourceLocation) : Unit =
       ModelLoader.setCustomModelResourceLocation(item, 0, model)
 
-    def regModel(item : Item) : Unit =
+    def regModel : Item => Unit = item =>
       setModel(item, new ModelResourceLocation(item.getRegistryName, "inventory"))
 
     log.info("regModels")
