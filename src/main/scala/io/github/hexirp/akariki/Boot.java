@@ -9,7 +9,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
 /**
- * {@link Boot} connects Forge's initialization events to {@link Initializer} and works as a main class of akariki.
+ * {@link Boot} は Forge の初期化イベント群を {@link Initializer} へつなぎ、
+ * akariki のメインクラスとして働く。
  */
 @Mod(
         modid = Boot.MOD_ID,

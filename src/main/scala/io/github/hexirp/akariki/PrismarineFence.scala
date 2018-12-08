@@ -4,10 +4,10 @@ import net.minecraft.block.BlockFence
 import net.minecraft.block.material.{MapColor, Material}
 import net.minecraft.creativetab.CreativeTabs
 
-/** [[PrismarineFence]] is a item.
+/** [[PrismarineFence]] はプリズマリンから出来たフェンスである、
   *
-  * At the time of updating to Minecraft-1.13.x, the prismarine fence is going to be a water-proof fence. So, I predict
-  * that special changes will be needed. So I separated this class from Items.
+  * Minecraf 1.13.x への対応の時に、このアイテムは、水を通さない特殊なフェンスになることが予定されている。
+  * そのため、特別扱いする必要があることが予測される。そのため Items の中から分けた。
   *
   * @param metadata The metadata of akariki
   */

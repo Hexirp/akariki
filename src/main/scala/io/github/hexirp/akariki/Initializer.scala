@@ -7,7 +7,7 @@ import net.minecraftforge.fml.common.event.{ //
 
 import org.apache.logging.log4j.Logger
 
-/** [[Initializer]] receives Forge's initialization events.
+/** [[Initializer]] は Forge の初期化イベント群を受け取る。
   *
   * @param metadata The metadata of akariki
   * @param log      The logger of initialization

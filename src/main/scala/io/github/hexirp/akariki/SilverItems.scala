@@ -5,7 +5,7 @@ import net.minecraft.item.{Item, ItemBlock, ItemStack}
 
 import net.minecraftforge.fml.common.registry.GameRegistry
 
-/** [[SilverItems]] manages items related to Silver.
+/** [[SilverItems]] は銀に関するアイテムを管理する。
   *
   * @param metadata The metadata of akariki
   * @param blocks   The blocks of akariki

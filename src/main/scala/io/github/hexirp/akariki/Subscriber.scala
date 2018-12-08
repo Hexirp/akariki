@@ -11,7 +11,7 @@ import net.minecraftforge.event.RegistryEvent
 
 import org.apache.logging.log4j.Logger
 
-/** [[Subscriber]] receives Forge's events.
+/** [[Subscriber]] は Forge のイベントを受け取る。
   *
   * @param metadata The metadata of akariki
   * @param log      The logger of initialization

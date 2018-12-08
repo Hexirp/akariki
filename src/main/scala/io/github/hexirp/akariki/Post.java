@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
 /**
- * {@link Post} connects Forge's events to {@link Subscriber}.
+ * {@link Post} は Forge のイベント群を {@link Subscriber} へつなぐ。
  */
 public class Post {
     private final Subscriber subs;

@@ -4,7 +4,7 @@ import net.minecraft.block.material.{MapColor, Material}
 import net.minecraft.block.{Block, BlockFence}
 import net.minecraft.creativetab.CreativeTabs
 
-/** [[Blocks]] manages blocks of akariki.
+/** [[Blocks]] は akariki のブロック群を管理する。
   *
   * @param metadata The metadata of akariki
   */

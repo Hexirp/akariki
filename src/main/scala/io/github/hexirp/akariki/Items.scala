@@ -3,7 +3,7 @@ package io.github.hexirp.akariki
 import net.minecraft.creativetab.CreativeTabs
 import net.minecraft.item.{Item, ItemBlock}
 
-/** [[Items]] manages items of akariki.
+/** [[Items]] は akariki のアイテムを管理する。
   *
   * @param metadata The data of akariki
   * @param blocks   The blocks of akariki
