@@ -4,7 +4,7 @@ import net.minecraft.util.ResourceLocation
 
 import org.apache.logging.log4j.{LogManager, Logger}
 
-/** [[Metadata]] is important data of MOD.
+/** [[Metadata]] is important data of the MOD.
   *
   * @param id      The MOD's ID
   * @param name    The MOD's name
