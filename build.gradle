@@ -22,7 +22,6 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 version = "0.1.0-a-10"
 group = "io.github.hexirp"
-name= "akariki"
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
