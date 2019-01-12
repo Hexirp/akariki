@@ -1,7 +1,14 @@
 apply plugin: 'java'
+apply plugin: 'scala'
 
 version = '0.1.0-a-10'
 group = 'io.github.hexirp'
 
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
+
+dependencies {
+
+  implementation 'org.scala-lang:scala-library:2.11.5'
+
+}
