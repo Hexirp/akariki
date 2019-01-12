@@ -12,10 +12,10 @@ before_install:
   - chmod +x gradlew
 
 install:
-  - ./gradlew tasks --scan
+  - ./gradlew setupCIWorkspace
 
 script:
-  - ./gradlew build --scan
+  - ./gradlew build
 
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
