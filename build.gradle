@@ -22,10 +22,23 @@ buildscript {
 // コアプラグインを使う。
 plugins {
 
+  // scan をする。
+  id "com.gradle.build-scan" version "2.1
+
+  // コアプラグインのうちで使うものだけを指定する。
+  // java は scala の前提で、idea と eclipse は ForgeGradle の前提である。
   id 'java'
   id 'scala'
   id 'idea'
   id 'eclipse'
+
+}
+
+// scan の使用条件に同意する。
+buildScan {
+
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
 
 }
 
