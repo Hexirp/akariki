@@ -1,3 +1,14 @@
+// コアプラグインを使う。
+plugins {
+
+  id 'java'
+  id 'scala'
+  id 'idea'
+  id 'eclipse'
+
+}
+
+
 // ビルドスクリプトの設定をする。
 buildscript {
 
@@ -18,12 +29,6 @@ buildscript {
   }
 
 }
-
-// コアプラグインを使う。
-apply plugin: 'java'
-apply plugin: 'scala'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
 
 // ForgeGradle プラグインを使う。
 apply plugin: 'net.minecraftforge.gradle.forge'
