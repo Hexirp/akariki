@@ -1,5 +1,27 @@
+buildscript {
+
+  repositories {
+
+    jcenter ()
+
+    maven { url = 'http://files.minecraftforge.net/maven' }
+
+  }
+
+  dependencies {
+
+    classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
+
+  }
+
+}
+
 apply plugin: 'java'
 apply plugin: 'scala'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+
+apply plugin: 'net.minecraftforge.gradle.forge'
 
 version = '0.1.0-a-10'
 group = 'io.github.hexirp'
@@ -16,5 +38,14 @@ repositories {
 dependencies {
 
   implementation 'org.scala-lang:scala-library:2.11.5'
+
+}
+
+minecraft {
+
+  version = '1.12.2-14.23.4.2705'
+  mappings = 'snapshot_20171003'
+
+  runDir = 'run'
 
 }
