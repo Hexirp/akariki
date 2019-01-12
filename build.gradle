@@ -7,6 +7,12 @@ group = 'io.github.hexirp'
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
+repositories {
+
+  mavenCentral ()
+
+}
+
 dependencies {
 
   implementation 'org.scala-lang:scala-library:2.11.5'
