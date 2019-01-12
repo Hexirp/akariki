@@ -12,7 +12,7 @@ before_install:
   - chmod +x gradlew
 
 install:
-  - ./gradlew tasks
+  - ./gradlew setupCIWorkspace --stacktrace --debug
 
 script:
   - ./gradlew build
