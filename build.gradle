@@ -1,14 +1,3 @@
-// コアプラグインを使う。
-plugins {
-
-  id 'java'
-  id 'scala'
-  id 'idea'
-  id 'eclipse'
-
-}
-
-
 // ビルドスクリプトの設定をする。
 buildscript {
 
@@ -27,6 +16,16 @@ buildscript {
     classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
 
   }
+
+}
+
+// コアプラグインを使う。
+plugins {
+
+  id 'java'
+  id 'scala'
+  id 'idea'
+  id 'eclipse'
 
 }
 
