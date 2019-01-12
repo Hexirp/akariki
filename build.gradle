@@ -1,5 +1,7 @@
+// ビルドスクリプトの設定をする。
 buildscript {
 
+  // ビルドスクリプトが使うリポジトリを指定する。
   repositories {
 
     jcenter ()
@@ -8,6 +10,7 @@ buildscript {
 
   }
 
+  // ビルドスクリプトが依存するライブラリを指定する。
   dependencies {
 
     classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
@@ -16,36 +19,45 @@ buildscript {
 
 }
 
+// コアプラグインを使う。
 apply plugin: 'java'
 apply plugin: 'scala'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 
+// ForgeGradle プラグインを使う。
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+// プロジェクトのプロパティを設定する。
 version = '0.1.0-a-10'
 group = 'io.github.hexirp'
 
+// ソースコードとターゲットは Java 8 である。
 sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
+// プロジェクトが使うリポジトリを指定する。
 repositories {
 
   mavenCentral ()
 
 }
 
+// プロジェクトが依存するライブラリを指定する。
 dependencies {
 
   implementation 'org.scala-lang:scala-library:2.11.5'
 
 }
 
+// ForgeGradle の設定をする。
 minecraft {
 
+  // プロジェクトが依存する Minecraft Forge を指定する。
   version = '1.12.2-14.23.4.2705'
   mappings = 'snapshot_20171003'
 
+  // プロジェクトを実際の Minecraft でデバッグするときのフォルダを指定する。
   runDir = 'run'
 
 }
