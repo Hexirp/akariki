@@ -57,6 +57,11 @@ repositories {
 // プロジェクトが依存するライブラリを指定する。
 dependencies {
 
+  // 注意: ForgeGradle により追加される依存関係は 'org.scala-lang:scala-library:2.11.1' を
+  // 使用している。そのため、二つのライブラリが併存する形になる。これは targetCompatibility に
+  // 1.8 を指定したときにコンパイルできない問題があり、それが 2.11.5 より修正されているため、
+  // それ以上のバージョンを指定しなければいけなかったため。マイナーバージョンの違いであるため
+  // 危険性が少ないと判断した。
   implementation 'org.scala-lang:scala-library:2.11.5'
 
 }
