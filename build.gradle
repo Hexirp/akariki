@@ -40,6 +40,13 @@ group = 'io.github.hexirp'
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
+// wrapper には、その version がどうあれ all を使う。
+wrapper {
+
+  distributionType = Wrapper.DistributionType.ALL
+
+}
+
 // プロジェクトが使うリポジトリを指定する。
 repositories {
 
