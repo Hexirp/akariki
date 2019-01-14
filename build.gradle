@@ -65,3 +65,7 @@ minecraft {
   runDir = 'run'
 
 }
+
+// コンパイル時のエンコーディングを UTF-8 にする
+def encoding = { it.encoding = 'UTF-8' }
+tasks.withType(AbstractCompile) each { encoding it.options }
