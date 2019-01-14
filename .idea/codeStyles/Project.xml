@@ -37,5 +37,12 @@
       </option>
       <option name="SPACE_BEFORE_TYPE_COLON" value="true" />
     </ScalaCodeStyleSettings>
+    <codeStyleSettings language="Groovy">
+      <indentOptions>
+        <option name="INDENT_SIZE" value="2" />
+        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+        <option name="TAB_SIZE" value="2" />
+      </indentOptions>
+    </codeStyleSettings>
   </code_scheme>
 </component>
