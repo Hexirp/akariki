@@ -37,8 +37,8 @@ version = '0.1.0-a-10'
 group = 'io.github.hexirp'
 
 // ソースコードとターゲットは Java 8 である。
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
 
 // プロジェクトが使うリポジトリを指定する。
 repositories {
