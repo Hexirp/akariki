@@ -7,6 +7,6 @@
     "north": "akariki:blocks/advanced_crafting_table_front",
     "east": "akariki:blocks/advanced_crafting_table_side",
     "south": "akariki:blocks/advanced_crafting_table_side",
-    "west": "akariki:blocks/advanced_crafting_table_front"
+    "west": "akariki:blocks/advanced_crafting_table_side"
   }
 }
