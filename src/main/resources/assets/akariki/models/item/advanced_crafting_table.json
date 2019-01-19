@@ -1,5 +1,5 @@
 {
-  "parent": "block/crafting_table",
+  "parent": "akariki:block/advanced_crafting_table",
   "display": {
     "thirdperson": {
       "rotation": [
