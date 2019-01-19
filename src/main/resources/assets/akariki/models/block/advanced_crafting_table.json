@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "particle": "blocks/advanced_crafting_table_front",
-    "down": "blocks/planks_oak",
-    "up": "blocks/advanced_crafting_table_top",
-    "north": "blocks/advanced_crafting_table_front",
-    "east": "blocks/advanced_crafting_table_side",
-    "south": "blocks/advanced_crafting_table_side",
-    "west": "blocks/advanced_crafting_table_front"
+    "particle": "akariki:blocks/advanced_crafting_table_front",
+    "down": "minecraft:blocks/planks_oak",
+    "up": "akariki:blocks/advanced_crafting_table_top",
+    "north": "akariki:blocks/advanced_crafting_table_front",
+    "east": "akariki:blocks/advanced_crafting_table_side",
+    "south": "akariki:blocks/advanced_crafting_table_side",
+    "west": "akariki:blocks/advanced_crafting_table_front"
   }
 }
