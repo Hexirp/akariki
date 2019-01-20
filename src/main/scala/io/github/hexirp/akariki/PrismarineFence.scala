@@ -6,8 +6,8 @@ import net.minecraft.creativetab.CreativeTabs
 
 /** [[PrismarineFence]] はプリズマリンから出来たフェンスである。
   *
-  * Minecraf 1.13.x への対応の時に、このアイテムは、水を通さない特殊なフェンスになることが予定されている。
-  * そのため、特別扱いする必要があることが予測される。そのため Items の中から分けた。
+  * Minecraft 1.13 ではフェンスが水を通すようになるが、このフェンスは水を通さないままにするつもりである。
+  * そのため、プリズマリンフェンスのためのクラスが必要になる。
   *
   * @param metadata The metadata of akariki
   */
